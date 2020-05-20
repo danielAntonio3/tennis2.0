@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Atualizar torneo</title>
+</head>
+
+<body>
+
+    <form class="formulario" action="">
+        <div class="contenedor">
+            <h3 class="titulo">Registar torneo</h3>
+
+            <div class="contenedor2">
+                <label for="nombre" >Nombre:</label>
+                <input type="text" placeholder="Nombre Torneo" class="nombre" id="nombre">
+            </div>
+
+            <div class="contenedor2">
+            <label for="modalidad">Modalidad:</label>
+            <select placeholder="Modalidad" id="modalidad" class="modalida">
+                <option value="null"></option>
+                <option value="Normla">normal</option>
+                <option value="Doble">doble</option>
+            </select>
+        </div>
+        
+        <div class="contenedor2">
+            <label for="sede">Sede:</label>
+            <select placeholder="Sede" id="sede" class="sede">
+                <option value="null"></option>
+                <option value="">ejemplo 1</option>
+                <option value="">ejemplo 2</option>
+                <option value="">ejemplo 3</option>
+                <option value="">ejemplo 4</option>
+                <option value="">ejemplo 5</option>
+                <option value="">ejemplo 6</option>
+            </select>
+        </div>
+        <div class="contenedor2">
+            <label for="fechaIni">Fecha inicio:</label>
+            <input type="date" id="fechaIni" class="fechaini"/>
+            <label for="fechaFin">Fecha final:</label>
+            <input type="date" id="fechaFin" class="fechafin"/>
+        </div>     
+            <input type="submit" value="REGISTAR TORNEO" class="boton">
+        </div>
+    </form>
+    
+</body>
+</html>
