@@ -2,7 +2,7 @@
 $usuario = 'root';
 $pass = "1234";
 
-$mbd = new PDO('mysql:host=localhost;dbname=usuario', $usuario, $pass);
+  $mbd = new PDO('mysql:host=localhost;dbname=lobotennis', $usuario, $pass);
 
 
     $nombre=$_GET['nombre'];
@@ -10,21 +10,13 @@ $mbd = new PDO('mysql:host=localhost;dbname=usuario', $usuario, $pass);
     $categoria=$_GET['categoria'];
     $numEquipos=$_GET['numEquipos'];
     $sede=$_GET['sede'];
-    $fechaIni=$_GET['fechaIni'];
+    $fechaInicio=$_GET['fechaInicio'];
     $fechaFin=$_GET['fechaFin'];
-    
-    
-      $queryInsert ="insert into nombretabla(nombre,modalidad,categoria,numEquipos,sede,fechaIni,fechaFin)
-        values('$nombre','$modalidad','$categoria','$numEquipos','$sede','$fechaIni','$fechaFin')";
+
+      $queryInsert ="insert into Torneo(nombre_torneo,fecha_inicio,fecha_fin,modalidad_torneo,categoria,num_equipos,sede)
+        values('$nombre','$fechaInicio','$fechaFin','$modalidad','$categoria','$numEquipos','$sede')";
           if($mbd->exec($queryInsert)==true)
-          {   
-              //$last_id = $mbd->lastInsertId();
-              //echo $last_id;
-              //$query="insert into estadoArticulo(idCarro) values('$last_id')";
-              //$mbd->exec($query);
-              echo "1";
-          }else{
-              echo"0";       
-            }
+          {echo "1";}
+          else{echo"0";}
                 
 ?>
