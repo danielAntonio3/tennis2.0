@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilos.css">
+    <script src="../0.-jquery/jquery-3.4.1.min.js"></script>
+    <script src="scripts/registarTorneo.js"></script>
     <title>Registar torneo</title>
 </head>
 
@@ -40,12 +42,12 @@
             <label for="numEquipos">Num. Equipos</label>
             <select id="numEquipos" class="numEquipos">
                 <option value="null"></option>
-                <option value="">1 equipo</option>
-                <option value="">2 equipo</option>
-                <option value="">3 equipo</option>
-                <option value="">4 equipo</option>
-                <option value="">5 equipo</option>
-                <option value="">6 equipo</option>
+                <option value="1">1 equipo</option>
+                <option value="2">2 equipo</option>
+                <option value="3">3 equipo</option>
+                <option value="4">4 equipo</option>
+                <option value="5">5 equipo</option>
+                <option value="6">6 equipo</option>
             </select>
         </div>
         
@@ -53,12 +55,12 @@
             <label for="sede">Sede:</label>
             <select placeholder="Sede" id="sede" class="sede">
                 <option value="null"></option>
-                <option value="">ejemplo 1</option>
-                <option value="">ejemplo 2</option>
-                <option value="">ejemplo 3</option>
-                <option value="">ejemplo 4</option>
-                <option value="">ejemplo 5</option>
-                <option value="">ejemplo 6</option>
+                <option value="1">ejemplo 1</option>
+                <option value="2">ejemplo 2</option>
+                <option value="3">ejemplo 3</option>
+                <option value="4">ejemplo 4</option>
+                <option value="5">ejemplo 5</option>
+                <option value="6">ejemplo 6</option>
             </select>
         </div>
         <div class="contenedor2">
@@ -67,7 +69,7 @@
             <label for="fechaFin">Fecha final:</label>
             <input type="date" id="fechaFin" class="fechafin"/>
         </div>     
-            <input type="submit" value="REGISTAR TORNEO" class="boton">
+            <input type="button" value="REGISTAR TORNEO" class="boton" id="registrar">
         </div>
     </form>
     
