@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <title>Document</title>
+    <script type="text/javascript">
+    function cambiaEstilo(el) {
+        var nombre = el.className;
+        var boton = el.id;
+        var seleccionado = "btnTarjeta_Focus";
+        var no_seleccionado = "btnTarjeta_NoFocus";
+
+        // if (nombre == seleccionado) {
+        // el.setAttribute("class", no_seleccionado);
+        // } else {
+        // el.setAttribute("class", seleccionado);
+        // }
+        if (el.id == "simples") {
+            el.setAttribute("class", seleccionado);
+            document.getElementById("dobles").setAttribute("class", no_seleccionado);
+        } else {
+            if (el.id == "dobles") {
+                el.setAttribute("class", seleccionado);
+                document.getElementById("simples").setAttribute("class", no_seleccionado);
+            }
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md justify-content-center">
+        <a href="/" class="navbar-brand d-flex w-50 mr-auto white">La vaca de Toño</a>
+        <div>
+            <!-- navbar -->
+            <ul class="nav navbar-nav justify-content-end">
+                <li class="nav-item">
+                    <button class="btnPerfil">
+                        <svg class="bi bi-people-circle" width="32px" height="32px" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 008 15a6.987 6.987 0 005.468-2.63z" />
+    <path fill-rule="evenodd" d="M8 9a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
+    <path fill-rule="evenodd" d="M8 1a7 7 0 100 14A7 7 0 008 1zM0 8a8 8 0 1116 0A8 8 0 010 8z" clip-rule="evenodd" />
+</svg>
+</button>
+</li>
+</ul>
+</div>
+</nav>
+    <div class="content">
+        <h2 style="font-weight: 600;">Administrar participantes</h2>
+        <br>
+        <h4>Seleccione un torneo</h4>
+        <br>
+        <div class="card">
+            <div class="card-header tarjetaHeader">
+                <button id="simples" class="btnTarjeta_Focus" onclick="cambiaEstilo(this)">
+                    SIMPLES
+                </button>
+                <button id="dobles" class="btnTarjeta_NoFocus" onclick="cambiaEstilo(this)">
+                    DOBLES
+                </button>
+            </div>
+            <div class="card-body container" style="max-height: 300px;">
+                <!-- Empieza a mostrar los torneos -->
+                <button class="torneo">
+                    <span class="row" style="margin:0;">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-10">
+                            <h4 class="card-title" style="padding-bottom: 5px">London Open</h4>
+                            <br>
+                            <p class="card-text" style="padding-bottom: 0px">Londres, Inglaterra</p>
+                            <p class="card-text">Jul 26 - Jul 30</p>
+                        </div>
+                    </span>
+                </button>
+                <button>
+                    <div class=" card mb-3" style="max-width: 220px; max-height: 150px; margin-right: 15px;">
+                        <div class="row no-gutters" id="t_simple">
+                            <div class=" col-md-1" style="background-color: #2185D5; height: 149px;"></div>
+                            <div class="col-md-11">
+                                <div class="card-body">
+                                    <h4 class="card-title" style="padding-bottom: 10px">London Open</h4>
+                                    <br>
+                                    <p class="card-text" style="padding-bottom: 0px">Londres, Inglaterra</p>
+                                    <p class="card-text">Jul 26 - Jul 30</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
