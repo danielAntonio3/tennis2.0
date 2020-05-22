@@ -1,39 +1,193 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/estilos.css">
-    <script src="../0.-jquery/jquery-3.4.1.min.js"></script>
-    <script src="./scripts/mostrarTorneo.js"></script>
-    <title>Atualizar torneo</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="../0.-jquery/jquery-3.4.1.min.js"></script>
+  <script src="./scripts/mostrarTorneo.js"></script>
+  <title>Atualizar torneo</title>
 </head>
+
 <body>
-<div class="contenedor">
-<table id="tabla">
-    <thead>
-      <tr>
+  <div class="content">
+    <h2 style="text-align:center;">Torneos</h2>
+    <br>
+    <table class="container-fluid overflow-auto">
+      <thead class="theader">
+        <tr>
           <th>Fecha</th>
           <th>Torneo</th>
           <th>Modalidad</th>
           <th>Sede</th>
           <th>Acción</th>
-      </tr>
-    </thead>
-
-    <tbody id="body">
-      <tr>
-        <td>jun.08-jun14</td>
-        <td>Libera Open</td>
-        <td>Simple</td>
-        <td>Stuttgart,Alemania</td>
-        <td><input type="button" value="editar"></td>
-      </tr>
-    </tbody>
-  </table>
-  
-</div>
-<div class="botonCrearMas" id='botonEditar'>
-    <input type="button" value="Crear">
-</div>
+        </tr>
+      </thead>
+      <tbody id="body">
+        <tr>
+          <td>jun.08 - jun14</td>
+          <td>Libera Open</td>
+          <td>Simple</td>
+          <td>Stuttgart, Alemania</td>
+          <td>
+            <button onclick="location.href='ActualizarTornoe.html';">
+              <svg class="bi bi-pencil-square" width="30px" height="30px" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.502 1.94a.5.5 0 010 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 01.707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 00-.121.196l-.805 2.414a.25.25 0 00.316.316l2.414-.805a.5.5 0 00.196-.12l6.813-6.814z" />
+                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 002.5 15h11a1.5 1.5 0 001.5-1.5v-6a.5.5 0 00-1 0v6a.5.5 0 01-.5.5h-11a.5.5 0 01-.5-.5v-11a.5.5 0 01.5-.5H9a.5.5 0 000-1H2.5A1.5 1.5 0 001 2.5v11z" clip-rule="evenodd" />
+              </svg>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>jun.15 - jun.21</td>
+          <td>Noventi Open</td>
+          <td>Simple</td>
+          <td>Londres, Inglaterra</td>
+          <td>
+            <button onclick="location.href='ActualizarTornoe.html';">
+              <svg class="bi bi-pencil-square" width="30px" height="30px" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.502 1.94a.5.5 0 010 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 01.707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 00-.121.196l-.805 2.414a.25.25 0 00.316.316l2.414-.805a.5.5 0 00.196-.12l6.813-6.814z" />
+                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 002.5 15h11a1.5 1.5 0 001.5-1.5v-6a.5.5 0 00-1 0v6a.5.5 0 01-.5.5h-11a.5.5 0 01-.5-.5v-11a.5.5 0 01.5-.5H9a.5.5 0 000-1H2.5A1.5 1.5 0 001 2.5v11z" clip-rule="evenodd" />
+              </svg>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>jun.15 - jun.21</td>
+          <td>Mallorca Championships</td>
+          <td>Simple</td>
+          <td>Calvia, España</td>
+          <td>
+            <button onclick="location.href='ActualizarTornoe.html';">
+              <svg class="bi bi-pencil-square" width="30px" height="30px" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.502 1.94a.5.5 0 010 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 01.707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 00-.121.196l-.805 2.414a.25.25 0 00.316.316l2.414-.805a.5.5 0 00.196-.12l6.813-6.814z" />
+                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 002.5 15h11a1.5 1.5 0 001.5-1.5v-6a.5.5 0 00-1 0v6a.5.5 0 01-.5.5h-11a.5.5 0 01-.5-.5v-11a.5.5 0 01.5-.5H9a.5.5 0 000-1H2.5A1.5 1.5 0 001 2.5v11z" clip-rule="evenodd" />
+              </svg>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>jul.03 - jul.19</td>
+          <td>London Open</td>
+          <td>Simple</td>
+          <td>Londres, Inglaterra</td>
+          <td>
+            <button onclick="location.href='ActualizarTornoe.html';">
+              <svg class="bi bi-pencil-square" width="30px" height="30px" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.502 1.94a.5.5 0 010 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 01.707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 00-.121.196l-.805 2.414a.25.25 0 00.316.316l2.414-.805a.5.5 0 00.196-.12l6.813-6.814z" />
+                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 002.5 15h11a1.5 1.5 0 001.5-1.5v-6a.5.5 0 00-1 0v6a.5.5 0 01-.5.5h-11a.5.5 0 01-.5-.5v-11a.5.5 0 01.5-.5H9a.5.5 0 000-1H2.5A1.5 1.5 0 001 2.5v11z" clip-rule="evenodd" />
+              </svg>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>jul.03 - jul.19</td>
+          <td>London Open</td>
+          <td>Simple</td>
+          <td>Londres, Inglaterra</td>
+          <td>
+            <button onclick="location.href='ActualizarTornoe.html';">
+              <svg class="bi bi-pencil-square" width="30px" height="30px" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.502 1.94a.5.5 0 010 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 01.707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 00-.121.196l-.805 2.414a.25.25 0 00.316.316l2.414-.805a.5.5 0 00.196-.12l6.813-6.814z" />
+                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 002.5 15h11a1.5 1.5 0 001.5-1.5v-6a.5.5 0 00-1 0v6a.5.5 0 01-.5.5h-11a.5.5 0 01-.5-.5v-11a.5.5 0 01.5-.5H9a.5.5 0 000-1H2.5A1.5 1.5 0 001 2.5v11z" clip-rule="evenodd" />
+              </svg>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>jul.03 - jul.19</td>
+          <td>London Open</td>
+          <td>Simple</td>
+          <td>Londres, Inglaterra</td>
+          <td>
+            <button onclick="location.href='ActualizarTornoe.html';">
+              <svg class="bi bi-pencil-square" width="30px" height="30px" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.502 1.94a.5.5 0 010 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 01.707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 00-.121.196l-.805 2.414a.25.25 0 00.316.316l2.414-.805a.5.5 0 00.196-.12l6.813-6.814z" />
+                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 002.5 15h11a1.5 1.5 0 001.5-1.5v-6a.5.5 0 00-1 0v6a.5.5 0 01-.5.5h-11a.5.5 0 01-.5-.5v-11a.5.5 0 01.5-.5H9a.5.5 0 000-1H2.5A1.5 1.5 0 001 2.5v11z" clip-rule="evenodd" />
+              </svg>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>jul.03 - jul.19</td>
+          <td>London Open</td>
+          <td>Simple</td>
+          <td>Londres, Inglaterra</td>
+          <td>
+            <button onclick="location.href='ActualizarTornoe.html';">
+              <svg class="bi bi-pencil-square" width="30px" height="30px" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.502 1.94a.5.5 0 010 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 01.707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 00-.121.196l-.805 2.414a.25.25 0 00.316.316l2.414-.805a.5.5 0 00.196-.12l6.813-6.814z" />
+                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 002.5 15h11a1.5 1.5 0 001.5-1.5v-6a.5.5 0 00-1 0v6a.5.5 0 01-.5.5h-11a.5.5 0 01-.5-.5v-11a.5.5 0 01.5-.5H9a.5.5 0 000-1H2.5A1.5 1.5 0 001 2.5v11z" clip-rule="evenodd" />
+              </svg>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>jul.03 - jul.19</td>
+          <td>London Open</td>
+          <td>Simple</td>
+          <td>Londres, Inglaterra</td>
+          <td>
+            <button onclick="location.href='ActualizarTornoe.html';">
+              <svg class="bi bi-pencil-square" width="30px" height="30px" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.502 1.94a.5.5 0 010 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 01.707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 00-.121.196l-.805 2.414a.25.25 0 00.316.316l2.414-.805a.5.5 0 00.196-.12l6.813-6.814z" />
+                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 002.5 15h11a1.5 1.5 0 001.5-1.5v-6a.5.5 0 00-1 0v6a.5.5 0 01-.5.5h-11a.5.5 0 01-.5-.5v-11a.5.5 0 01.5-.5H9a.5.5 0 000-1H2.5A1.5 1.5 0 001 2.5v11z" clip-rule="evenodd" />
+              </svg>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>jul.03 - jul.19</td>
+          <td>London Open</td>
+          <td>Simple</td>
+          <td>Londres, Inglaterra</td>
+          <td>
+            <button onclick="location.href='ActualizarTornoe.html';">
+              <svg class="bi bi-pencil-square" width="30px" height="30px" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.502 1.94a.5.5 0 010 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 01.707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 00-.121.196l-.805 2.414a.25.25 0 00.316.316l2.414-.805a.5.5 0 00.196-.12l6.813-6.814z" />
+                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 002.5 15h11a1.5 1.5 0 001.5-1.5v-6a.5.5 0 00-1 0v6a.5.5 0 01-.5.5h-11a.5.5 0 01-.5-.5v-11a.5.5 0 01.5-.5H9a.5.5 0 000-1H2.5A1.5 1.5 0 001 2.5v11z" clip-rule="evenodd" />
+              </svg>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>jul.03 - jul.19</td>
+          <td>London Open</td>
+          <td>Simple</td>
+          <td>Londres, Inglaterra</td>
+          <td>
+            <button onclick="location.href='ActualizarTornoe.html';">
+              <svg class="bi bi-pencil-square" width="30px" height="30px" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.502 1.94a.5.5 0 010 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 01.707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 00-.121.196l-.805 2.414a.25.25 0 00.316.316l2.414-.805a.5.5 0 00.196-.12l6.813-6.814z" />
+                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 002.5 15h11a1.5 1.5 0 001.5-1.5v-6a.5.5 0 00-1 0v6a.5.5 0 01-.5.5h-11a.5.5 0 01-.5-.5v-11a.5.5 0 01.5-.5H9a.5.5 0 000-1H2.5A1.5 1.5 0 001 2.5v11z" clip-rule="evenodd" />
+              </svg>
+            </button>
+          </td>
+        </tr>
+        <tr>
+  <td>jul.03 - jul.19</td>
+  <td>London Open</td>
+  <td>Simple</td>
+  <td>Londres, Inglaterra</td>
+  <td>
+    <button onclick="location.href='ActualizarTornoe.html';">
+      <svg class="bi bi-pencil-square" width="30px" height="30px" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15.502 1.94a.5.5 0 010 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 01.707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 00-.121.196l-.805 2.414a.25.25 0 00.316.316l2.414-.805a.5.5 0 00.196-.12l6.813-6.814z" />
+        <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 002.5 15h11a1.5 1.5 0 001.5-1.5v-6a.5.5 0 00-1 0v6a.5.5 0 01-.5.5h-11a.5.5 0 01-.5-.5v-11a.5.5 0 01.5-.5H9a.5.5 0 000-1H2.5A1.5 1.5 0 001 2.5v11z" clip-rule="evenodd" />
+      </svg>
+    </button>
+  </td>
+</tr>
+      </tbody>
+    </table>
+    <div class="botonCrearMas">
+      <button onclick="location.href='registrarTorneo.html';">
+        <svg class="shadow-lg rounded rounded-circle bi bi-plus-circle-fill" width="45px" height="45px" viewBox="0 0 16 16" fill="#2185D5" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M16 8A8 8 0 110 8a8 8 0 0116 0zM8.5 4a.5.5 0 00-1 0v3.5H4a.5.5 0 000 1h3.5V12a.5.5 0 001 0V8.5H12a.5.5 0 000-1H8.5V4z" clip-rule="evenodd" />
+        </svg>
+      </button>
+    </div>
+  </div>
 </body>
