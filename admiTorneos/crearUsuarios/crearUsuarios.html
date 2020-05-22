@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="../../0.-jquery/jquery-3.4.1.min.js"></script>
+    <script src="./scripts/crearUsuarios.js"></script>
+    <title>Atualizar torneo</title>
+</head>
+
+<body>
+    <form class="formulario" action="">
+        <div class="contenedor">
+            <h3 class="titulo">Crear cuenta</h3>
+
+            <div class="contenedor2">
+                <label for="nombre" >Nombre:</label>
+                <input type="text" placeholder="Nombre" class="nombre" id="nombre">
+                <label for="apellidos" >Apellidos:</label>
+                <input type="text" placeholder="Apellidos" class="apellido" id="apellidos">
+            </div>
+            
+            <div class="contenedor2">
+                <label for="tipo">Tipo de usuario</label>
+                <select id="tipo" class="tipo">
+                    <option value=""> </option>
+                    <option value="1">Administrador</option>
+                    <option value="2">Monitor</option>
+                    <option value="3">Federacion</option>
+                </select>
+            </div>
+
+            <div class="contenedor2">
+                <label for="correo">Correo:</label>
+                <input type="email"  class="correo" placeholder="Correo electronico" id="correo">
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" class="password" placeholder="Contraseña" id="contrasena">
+            </div>
+
+            <div class="contenedor2">
+                <label for="pregunta">Seleciona un apregunta:</label>
+                <select id="pregunta" class="pregunta">
+                    <option value=""></option>
+                    <option value="1">Administrador</option>
+                    <option value="2">Monitor</option>
+                    <option value="3">Federacion</option>
+                </select>
+                <label for="respuesta">Respuesta:</label>
+                <input type="text" id="respuesta" class="respuestas" placeholder="Responde la pregunta">
+            </div>
+            
+            <button class="boton" id="botonRegistrar">REGISTARSE</button>
+        </div>
+    </form>
+</body>
+</html>
