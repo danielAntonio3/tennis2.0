@@ -1,62 +1,69 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../0.-jquery/jquery-3.4.1.min.js"></script>
-    <script src="/admiTorneos/scripts/actualizarTorneo.js"></script>
-    <link rel="stylesheet" href="css/estilos.css">
-    <title>Atualizar torneo</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="../0.-jquery/jquery-3.4.1.min.js"></script>
+  <script src="/admiTorneos/scripts/actualizarTorneo.js"></script>
+  <link rel="stylesheet" href="css/estilos.css">
+  <title>Atualizar torneo</title>
 </head>
 
 <body>
-
-    <form class="formulario" methed="get">
-        <div class="contenedor">
-            <h3 class="titulo">Actualizar torneo</h3>
-
-            <div class="contenedor2">
-                <label for="nombre" >Nombre:</label>
-                <input type="text" placeholder="Nombre Torneo" class="nombre" id="nombre">
+  <!-- Image and text -->
+  <nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+      <img src="https://getbootstrap.com/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+      Bootstrap
+    </a>
+  </nav>
+  <div class="content">
+    <form class="formulario" method="get">
+      <div class="contenedor">
+        <h4>Editar torneo</h4>
+        <div>
+          <input type="text" placeholder="Nombre Torneo" class="nombre" id="nombre">
+        </div>
+        <div>
+          <select placeholder="Modalidad" id="modalidad" class="modalida">
+            <option value="" disabled selected>Modalidad</option>
+            <option value="Normla">Normal</option>
+            <option value="Doble">Doble</option>
+          </select><br>
+          <select id="sede" class="sede">
+            <option value="" disabled selected hidden>Sede</option>
+            <option value="RACKET CLUB,Capital Federal">RACKET CLUB,Capital Federal</option>
+            <option value="CIUDAD DE BS. AS.,Capital Federal">CIUDAD DE BS. AS.,Capital Federal</option>
+            <option value="CLUB FERROCARRIL OESTE,Capital Federal">CLUB FERROCARRIL OESTE,Capital Federal</option>
+            <option value="Nahuel Tenis,Zona norte">Nahuel Tenis,Zona norte</option>
+            <option value="DEP. SAN ANDRÉS,Zona Noroeste">DEP. SAN ANDRÉS,Zona Noroeste</option>
+            <option value="SPORT CLUB,Zona Oste">SPORT CLUB,Zona Oste</option>
+            <option value="CLUB ALMAGRO TENIS,Zona Oste">CLUB ALMAGRO TENIS,Zona Oste</option>
+            <option value="CLUB BASTYCOURTS,Zona Oste">CLUB BASTYCOURTS,Zona Oste</option>
+            <option value="TENIS BANCO NACIÓN,Capital Federal">TENIS BANCO NACIÓN,Capital Federal</option>
+            <option value="CLUB COMUNICACIONES,Capital Federal">CLUB COMUNICACIONES,Capital Federal</option>
+            <option value="CLUB ATLÉTICO PILAR,Zona norte">CLUB ATLÉTICO PILAR,Zona norte</option>
+            <option value="Tenis Club Escobar,Zona norte">Tenis Club Escobar,Zona norte</option>
+          </select><br><br>
+          <div class="container" style="margin-bottom: 4%;">
+            <div class="row">
+              <label for="fechaIni">Fecha inicio:</label>
+              <input type="date" id="fechaIni" />
             </div>
-
-        <div class="contenedor2">
-            <label for="modalidad">Modalidad:</label>
-            <select placeholder="Modalidad" id="modalidad" class="modalida">
-                <option value="null"></option>
-                <option value="Normla">normal</option>
-                <option value="Doble">doble</option>
-            </select>
+          </div>
+          <div class="container">
+            <div class="row">
+              <label for="fechaFin">Fecha final:</label>
+              <input type="date" id="fechaFin" />
+            </div>
+          </div>
         </div>
-        
-        <div class="contenedor2">
-            <label for="sede">Sede:</label>
-            <select placeholder="Sede" id="sede" class="sede">
-                <option value="null"></option>
-                <option value="RACKET CLUB,Capital Federal">RACKET CLUB,Capital Federal</option>
-                <option value="CIUDAD DE BS. AS.,Capital Federal">CIUDAD DE BS. AS.,Capital Federal</option>
-                <option value="CLUB FERROCARRIL OESTE,Capital Federal">CLUB FERROCARRIL OESTE,Capital Federal</option>
-                <option value="Nahuel Tenis,Zona norte">Nahuel Tenis,Zona norte</option> 
-                <option value="DEP. SAN ANDRÉS,Zona Noroeste">DEP. SAN ANDRÉS,Zona Noroeste</option>           
-                <option value="SPORT CLUB,Zona Oste">SPORT CLUB,Zona Oste</option>
-                <option value="CLUB ALMAGRO TENIS,Zona Oste">CLUB ALMAGRO TENIS,Zona Oste</option>
-                <option value="CLUB BASTYCOURTS,Zona Oste">CLUB BASTYCOURTS,Zona Oste</option>
-                <option value="TENIS BANCO NACIÓN,Capital Federal">TENIS BANCO NACIÓN,Capital Federal</option>
-                <option value="CLUB COMUNICACIONES,Capital Federal">CLUB COMUNICACIONES,Capital Federal</option>
-                <option value="CLUB ATLÉTICO PILAR,Zona norte">CLUB ATLÉTICO PILAR,Zona norte</option>
-                <option value="Tenis Club Escobar,Zona norte">Tenis Club Escobar,Zona norte</option>
-            </select>
-        </div>
-
-        <div class="contenedor2">
-            <label for="fechaIni">Fecha inicio:</label>
-            <input type="date" id="fechaIni" class="fechaini"/>
-            <label for="fechaFin">Fecha final:</label>
-            <input type="date" id="fechaFin" class="fechafin"/>
-        </div>     
-            <input type="button" value="REGISTAR TORNEO" class="boton" id="actualizar">
-        </div>
+        <input type="submit" value="Guardar cambios" class="boton" id="actualizar">
+      </div>
     </form>
-    
+  </div>
 </body>
+
 </html>
