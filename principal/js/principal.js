@@ -1,7 +1,17 @@
 $(document).ready(function () {
     
-    $('.carousel').carousel({
-        interval: 2000,
+    $('#carouselExampleCaptions').carousel({
+        interval: 200,
     })
+
+
+    $("#atras").click(function(){
+        $('#carouselExampleCaptions').carousel("prev");
+    });
+
+
+    $("#next").click(function(){
+        $('#carouselExampleCaptions').carousel("next");
+});
 
 });
