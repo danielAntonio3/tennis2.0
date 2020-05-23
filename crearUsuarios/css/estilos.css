@@ -1,0 +1,55 @@
+body{
+    padding: 0;
+    }
+    
+    
+    /*CSS QUE SE UTILIZA PARA PARA ACTUALIZAR Y CREAR TORNEO*/
+    .contenedor{
+        width: 50%;
+        margin: 0 auto;
+        display: flex;    
+        background-color: #65C1D8;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: center;
+    }
+    
+    .titulo{text-align: center;}
+    
+    .contenedor2{
+        text-align: center;
+        padding: 4%;
+        background-color: #8D8D8D;
+    }
+    
+    .nombre{
+        width: 30%;
+        height: 30px;   
+    }
+    .apellido{
+        width: 30%;
+        height: 30px;   
+    }
+    
+    .tipo{
+        width: 30%;
+        height: 30px;   
+    }
+
+    .correo{
+        width: 30%;
+        height: 30px; 
+    }
+
+    .password{
+        width: 30%;
+        height: 30px; 
+    }
+    .boton{
+        height: 30px;
+    }
+    
+    
+    
+    
+    
