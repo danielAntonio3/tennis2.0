@@ -1,0 +1,112 @@
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+/*CSS QUE SE UTILIZA PARA PARA ACTUALIZAR Y CREAR TORNEO*/
+.contenedor {
+  width: 60%;
+  margin: 0 auto;
+  /*display: flex;*/
+  background-color: #F1F1F1;
+  /*flex-direction: column;*/
+  /*justify-content: space-around;*/
+  text-align: center;
+  padding: 20px 55px;
+  border-radius: 7px;
+}
+
+/*.contenedor2 {
+  text-align: center;
+  padding: 15px;
+  background-color: #8D8D8D;
+}*/
+
+.botonCrearMas {
+  float: right;
+  margin: 20px;
+}
+
+.theader {
+  background-color: #303841;
+  color: white;
+  font-size: 25px;
+  font-weight: 600;
+  height: 65px;
+  width: 87%;
+  /*Para hacer que el header de la tabla se mantenga a pesar del scroll*/
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  /*-------------------------------------------------------------------*/
+}
+
+.content {
+  margin: 30px 17%;
+}
+
+table {
+  text-align: center;
+  min-height: 160px;
+  max-height: 375px;
+  border-radius: 10px;
+  /*para añadir el scroll cuando hayan más torneos*/
+  overflow-y: scroll;
+  display: block;
+  /*----------------------------------------*/
+}
+
+td {
+  height: 60px;
+  width: 14.6%;
+  border-bottom: 1px solid #2e2e2e;
+}
+
+th {
+  width: 14.6%;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+tr:nth-child(even) {
+  background-color: #E4E4E4;
+}
+
+/* ----------- Actualizar torneo ----------- */
+.forma {
+  background-color: #fff;
+  height: 100vh;
+  padding: 9% 3%;
+}
+
+input,
+select,
+option {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  margin-top: 5%;
+  font-size: 18px;
+  padding: 5px;
+}
+
+select:invalid {
+  color: gray;
+}
+
+input[type=date] {
+  max-width: 100%;
+  margin-top: 0;
+  margin-bottom: 2%;
+
+}
+
+input[type=submit] {
+  background-color: #303841;
+  color: white;
+  border: 1px solid #303841;
+  margin-bottom: 2%;
+  font-weight: 500;
+}
