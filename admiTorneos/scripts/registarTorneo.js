@@ -16,10 +16,9 @@ var fechaFin=$('#fechaFin');
         }else{
         var datos = ('nombre='+nombre.val()+'&modalidad='+modalidad.val()+'&categoria='+categoria.val()+'&numEquipos='+numEquipos.val()+
                     '&sede='+sede.val()+'&fechaInicio='+fechaInicio.val()+'&fechaFin='+fechaFin.val());
-        alert(datos);
         $.ajax({
             type: 'get',
-            url: './php/crearTorneo.php',
+            url: '../admiTorneos/php/crearTorneo.php',
             data: datos,
             success: function (respuesta) {
                 if (respuesta==1) {

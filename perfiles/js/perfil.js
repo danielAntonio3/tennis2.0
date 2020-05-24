@@ -39,8 +39,6 @@ $(document).ready(function () {
 
      /*PARA QUE CUANDO EL admin quiere crear nuevo torneo*/
      var crearTorneo=$('#crearTorneo');
-     
- 
      crearTorneo.click(function(){ 
          alert("crear torneo ");
          var espera=200;
