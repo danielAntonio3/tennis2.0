@@ -9,8 +9,8 @@ var fechaInicio=$('#fechaIni');
 var fechaFin=$('#fechaFin');
 
 
-    $('#registrar').click(function(){
-        
+    $('#registrar').click(function(event){
+        event.preventDefault();
         if(nombre.val()=="" || modalidad.val()=="" || categoria.val()=="" || numEquipos.val()=="" || sede.val()=="" || fechaInicio.val()=="" || fechaFin.val()==""){
             alert("todos los campos son obligatorios");
         }else{
@@ -22,8 +22,8 @@ var fechaFin=$('#fechaFin');
             data: datos,
             success: function (respuesta) {
                 if (respuesta==1) {
-                    alert('correcta');
-                    
+                    console.log("los dato se gusardaron con exito");
+                    //alert('correcta');
                     nombre.val('');
                     modalidad.val('');
                     categoria.val('');
@@ -33,7 +33,9 @@ var fechaFin=$('#fechaFin');
                     fechaFin.val('');
 
                 }else{
-                    alert('incorrecta');
+                    console.log("erro al guardar los datos");
+                    
+                    //alert('incorrecta');
                 }
             }
         });
