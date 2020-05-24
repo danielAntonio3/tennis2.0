@@ -5,7 +5,8 @@ $(document).ready(function () {
         function logic() {
             $.ajax({
                 type: "get",
-                url: "./php/mostrarTorneos.php",
+                //cgecar la ruta
+                url: "../admiTorneos/php/mostrarTorneos.php",
                 success: function (respuesta) {
                     var js = JSON.parse(respuesta);
                     console.log(js);

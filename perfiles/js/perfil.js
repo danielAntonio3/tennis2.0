@@ -3,10 +3,10 @@ $(document).ready(function () {
     var registrarUser=$('#registrarUser');
     var contenedor=$('#recargar');
     registrarUser.click(function(){ 
-        alert("hola");
-        var espera=2000;
+        alert("crear usuarios");
+        var espera=200;
         $.ajax({
-            url: "../../crearUsuarios/crearUsuarios.html",
+            url: "../crearUsuarios/crearUsuarios.html",
             beforeSend:function(){
                 contenedor.text('Cargando...');
             },
@@ -20,13 +20,12 @@ $(document).ready(function () {
 
     /*PARA QUE CUANDO EL USUARIO*/
     var verTorneo=$('#verTorneo');
-    var contenedor=$('#recargar');
 
     verTorneo.click(function(){ 
-        alert("hola");
-        var espera=2000;
+        alert("tabla torneos");
+        var espera=200;
         $.ajax({
-            url: "../../admiTorneos/tablaTorneos.html",
+            url: "../admiTorneos/tablaTorneos.html",
             beforeSend:function(){
                 contenedor.text('Cargando...');
             },
@@ -40,13 +39,13 @@ $(document).ready(function () {
 
      /*PARA QUE CUANDO EL admin quiere crear nuevo torneo*/
      var crearTorneo=$('#crearTorneo');
-     var contenedor=$('#recargar');
+     
  
      crearTorneo.click(function(){ 
-         alert("hola");
-         var espera=2000;
+         alert("crear torneo ");
+         var espera=200;
          $.ajax({
-             url: "../../admiTorneos/registrarTorneo.html",
+             url: "../admiTorneos/registrarTorneo.html",
              beforeSend:function(){
                  contenedor.text('Cargando...');
              },
