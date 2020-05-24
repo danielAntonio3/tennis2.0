@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="../0.-jquery/jquery-3.4.1.min.js"></script>
+  <script src="scripts/registrarUsuarios.js"></script>
+  <title>Registar usuarios</title>
+</head>
+  <body>
+
+  <div class="content">
+    <form action="" class="formulario">
+      <div class="contenedor">
+        <h4>Registrar Usuario</h4>
+        <input type="text" placeholder="Nombre de usuario" id="nombre" class="formUsuarios">
+        <select placeholder="Tipo de usuario" id="tipo" class="formUsuarios">
+          <option value="" disabled selected hidden>Tipo</option>
+          <option value="Jugador">Jugador</option>
+          <option value="Monitor">Monitor</option>
+        </select>
+        <input type="password" placeholder="Clave" id="password" class="formUsuarios">
+      </div>
+      <input type="submit" id="botonSubmit" class="boton" value="Registrar">
+
+    </form>
+  </div>
+
+
+
+
+  </body>
+</html>
