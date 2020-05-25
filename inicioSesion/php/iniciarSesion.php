@@ -1,7 +1,7 @@
 <?php
 
-session_start();
-$correo=$_SESSION['correo']=$_GET['correo'];
+//session_start();
+//$correo=$_SESSION['correo']=$_GET['correo'];
 
 $usuario = 'root';
 $pass = "1234";

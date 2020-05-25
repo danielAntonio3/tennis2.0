@@ -11,7 +11,7 @@ $(document).ready(function () {
                 console.log("Todo los capos son obligatorios");
             }else{
                 var datos=('correo='+email.val()+'&contrasena='+contrasena.val())
-                //console.log(datos);
+                console.log(datos);
                 $.ajax({
                     type: "post",
                     url: "../inicioSesion/php/iniciarSesion.php",
