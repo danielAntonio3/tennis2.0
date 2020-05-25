@@ -1,6 +1,5 @@
 $(document).ready(function () {
     
-
     var nombre=$('#nombre');
     var apellido=$('#apellidos');
     var tipUsuario=$('#tipo');
@@ -26,11 +25,11 @@ $(document).ready(function () {
                         console.log("los dato se gusardaron con exito");
                         nombre.val('');
                         apellido.val('');
-                        tipUsuario.val();
-                        correo.val();
-                        password.val();
-                        pregunta.val();
-                        respuesta.val();
+                        tipUsuario.val('');
+                        correo.val('');
+                        password.val('');
+                        pregunta.val('');
+                        respuesta.val('');
                 }else{
                     console.log("erro al guardar los datos");
                 }

@@ -1,7 +1,7 @@
 $(document).ready(function () {
     
     $('#carouselExampleCaptions').carousel({
-        interval: 200,
+        interval: 2000,
     })
 
 
@@ -12,6 +12,7 @@ $(document).ready(function () {
 
     $("#next").click(function(){
         $('#carouselExampleCaptions').carousel("next");
-});
+        
+    });
 
 });
