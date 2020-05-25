@@ -5,13 +5,15 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
 	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<script src="../0.-jquery/jquery-3.4.1.min.js"></script>
+	<script src="../inicioSesion/js/iniciarSesion.js"></script>
 	<title>Document</title>
 </head>
 <body>
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-sm-8 logo align-items-center" style="display: flex;">
-				<img src="https://2.bp.blogspot.com/-H90FPM47kV0/V1uqAFlUQNI/AAAAAAAAEmI/dunli2k2gDcuygycQQKc_jx84648x_wwgCK4B/s1600/Ararat%2BTennis%2BClub%2Bvector%2Blogo.png" alt="Logo" height="300px" width="450px" style=" margin: auto; display: block; vertical-align: middle;">
+				<img src="../imagenes/LogoTenis.png" alt="Logo" height="450px" width="450px" style=" margin: auto; display: block; vertical-align: middle;">
 			</div>
 			<div class="col-sm-4 align-self-center forma">
 				<div style="margin-bottom: 40px;">
@@ -20,9 +22,9 @@
 				</div>
 				<div>
 					<form action="" >
-						<input type="email" placeholder="Correo electrónico"><br><br>
-						<input type="password" placeholder="Contraseña"><br><br>
-						<input type="submit" value="Iniciar sesión"><br>
+						<input type="email" placeholder="Correo electrónico" id="inputCorreo"><br><br>
+						<input type="password" placeholder="Contraseña" id="inputPassword"><br><br>
+						<input type="submit" value="Iniciar sesión" id="iniciarSesion"><br>
 					</form><br>
 					<h5><a href="#">Olvidé mi contraseña</a></h5>
 				</div>
