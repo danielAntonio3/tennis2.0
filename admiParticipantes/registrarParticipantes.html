@@ -1,51 +1,44 @@
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/estilos.css">
-    <script src="../0.-jquery/jquery-3.4.1.min.js"></script>
-    <script src="scripts/registrarParticipantes.js"></script>
-    <title>Registrar participantes</title>
-  </head>
-  <body>
 
-    <nav class="navbar navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">
-        <img src="https://getbootstrap.com/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-        Bootstrap
-      </a>
-    </nav>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/perfil.css">
+  <script src="../0.-jquery/jquery-3.4.1.min.js"></script>
+  <script src="scripts/registrarParticipantes.js"></script>
+  <title>Registrar participantes</title>
+</head>
 
+<body>
+  <nav class="navbar navbar-light bg-light nav" style="border-bottom: 2px solid #c9c9c9">
+    <a class="navbar-brand" href="#">
+      <img src="../imagenes/LogoTenis.png" width="50px" alt="LogoTenis">
+      Master Tenis
+    </a>
+  </nav>
+  <div class="content">
+    <form class="formulario" action="">
+      <div class="contenedor">
+        <h4>Registrar participante</h4>
+        <input type="text" placeholder="Federacion" id="federacion">
+        <select id="licencia">
+          <option value="" disabled selected hidden>Licencia</option>
+          <option value="Ejemplo1">Ejemplo1</option>
+          <option value="Ejemplo2">Ejemplo2</option>
+        </select>
+        <input type="text" placeholder="Velocidad" id="velocidad">
+        <input type="text" placeholder="Puntos Promedio" id="puntos">
+        <input type="text" placeholder="Fuerza" id="fuerza">
+        <input type="text" placeholder="Encuentros Jugados" id="encuentros">
+        <input type="text" placeholder="Ranking ATP" id="ranking">
+        <input type="text" placeholder="Usuario" id="usuario">
+        <input type="text" placeholder="Torneo" id="torneo">
+      </div>
+      <input type="submit" value="Registrar Participante" class="boton" id="registrar">
+    </form>
+  </div>
+</body>
 
-    <div class="content">
-      <form class="formulario" action="">
-        <div class="contenedor">
-          <h4>Registrar participante</h4>
-          <input type="text" placeholder="Federacion" id="federacion">
-          <select id="licencia">
-            <option value="" disabled selected hidden>Licencia</option>
-            <option value="Ejemplo1">Ejemplo1</option>
-            <option value="Ejemplo2">Ejemplo2</option>
-          </select>
-          <input type="text" placeholder="Velocidad" id="velocidad">
-          <input type="text" placeholder="Puntos Promedio" id="puntos">
-          <input type="text" placeholder="Fuerza" id="fuerza">
-          <input type="text" placeholder="Encuentros Jugados" id="encuentros">
-          <input type="text" placeholder="Ranking ATP" id="ranking">
-          <input type="text" placeholder="Usuario" id="usuario">
-          <input type="text" placeholder="Torneo" id="torneo">
-
-
-        </div>
-        <input type="submit" value="Registrar Participante" class="boton" id="registrar">
-      </form>
-
-    </div>
-
-
-
-
-  </body>
 </html>

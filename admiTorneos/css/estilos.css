@@ -3,17 +3,17 @@
 }
 
 /*CSS QUE SE UTILIZA PARA PARA ACTUALIZAR Y CREAR TORNEO*/
-.contenedor {
+/*.contenedor {
   width: 60%;
   margin: 0 auto;
   /*display: flex;*/
-  background-color: #F1F1F1;
-  /*flex-direction: column;*/
-  /*justify-content: space-around;*/
-  text-align: center;
+/*background-color: #F1F1F1;
+  flex-direction: column;*/
+/*justify-content: space-around;*/
+/* text-align: center;
   padding: 20px 55px;
-  border-radius: 7px;
-}
+  border-radius: 7px;*/
+/*}*/
 
 /*.contenedor2 {
   text-align: center;
