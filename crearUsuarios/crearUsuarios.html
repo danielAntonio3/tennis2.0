@@ -1,59 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../crearUsuarios/css/estilos.css">
-    <script src="../0.-jquery/jquery-3.4.1.min.js"></script>
-    <script src="../crearUsuarios/scripts/crearUsuarios.js"></script>
-    <title>Atualizar torneo</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/estilos.css">
+  <script src="../0.-jquery/jquery-3.4.1.min.js"></script>
+  <script src="../crearUsuarios/scripts/crearUsuarios.js"></script>
+  <title>Atualizar torneo</title>
 </head>
 
 <body>
+  <nav class="navbar navbar-light bg-light nav" style="border-bottom: 2px solid #c9c9c9">
+    <a class="navbar-brand" href="#">
+      <img src="../imagenes/LogoTenis.png" width="50px" alt="LogoTenis">
+      Master Tenis
+    </a>
+  </nav>
+  <div class="content">
     <form class="formulario" action="">
-        <div class="contenedo">
-            <h3 class="titulo">Crear cuenta</h3>
-
-            <div class="contenedor2">
-                <label for="nombre" >Nombre:</label>
-                <input type="text" placeholder="Nombre" class="nombre" id="nombre">
-                <label for="apellidos" >Apellidos:</label>
-                <input type="text" placeholder="Apellidos" class="apellido" id="apellidos">
-            </div>
-            
-            <div class="contenedor2">
-                <label for="tipo">Tipo de usuario</label>
-                <select id="tipo" class="tipo">
-                    <option value=""> </option>
-                    <option value="1">Administrador</option>
-                    <option value="2">Monitor</option>
-                    <option value="3">Federacion</option>
-                </select>
-            </div>
-
-            <div class="contenedor2">
-                <label for="correo">Correo:</label>
-                <input type="email"  class="correo" placeholder="Correo electronico" id="correo">
-                <label for="contrasena">Contraseña:</label>
-                <input type="password" class="password" placeholder="Contraseña" id="contrasena">
-            </div>
-
-            <div class="contenedor2">
-                <label for="pregunta">Seleciona un apregunta:</label>
-                <select id="pregunta" class="pregunta">
-                    <option value=""></option>
-                    <option value="1">Nombre de tu mascota</option>
-                    <option value="2">Nombre de tu abuelo paterno</option>
-                    <option value="3">Nombre de tu primaria</option>
-                    <option value="4">Pelicula favorita</option>
-                    <option value="5">Lugar favorito</option>
-                </select>
-                <label for="respuesta">Respuesta:</label>
-                <input type="text" id="respuesta" class="respuestas" placeholder="Responde la pregunta">
-            </div>
-            
-            <button class="boton" id="botonRegistrar">REGISTARSE</button>
+      <div class="contenedor">
+        <h3 class="titulo">Crear cuenta</h3>
+        <div>
+          <input type="text" placeholder="Nombre" id="nombre">
+          <input type="text" placeholder="Apellidos" id="apellidos">
         </div>
+        <div class="">
+          <select id="tipo" class="tipo">
+            <option value="" disabled selected hidden>Tipo de usuario</option>
+            <option value="1">Administrador</option>
+            <option value="2">Monitor</option>
+            <option value="3">Federacion</option>
+          </select>
+        </div>
+        <div class="">
+          <input type="email" class="correo" placeholder="Correo electronico" id="correo">
+          <input type="password" class="password" placeholder="Contraseña" id="contrasena">
+        </div>
+        <div class="">
+          <select id="pregunta" class="pregunta">
+            <option value="" disabled selected hidden>Seleciona una pregunta</option>
+            <option value="1">Nombre de tu mascota</option>
+            <option value="2">Nombre de tu abuelo paterno</option>
+            <option value="3">Nombre de tu primaria</option>
+            <option value="4">Pelicula favorita</option>
+            <option value="5">Lugar favorito</option>
+          </select>
+          <input type="text" id="respuesta" class="respuestas" placeholder="Respuesta">
+        </div>
+        <input type="submit" value="Registrar" class="boton" id="botonRegistrar" />
+      </div>
     </form>
+  </div>
 </body>
+
 </html>

@@ -1,6 +1,6 @@
 <?php
 $usuario = 'root';
-$pass = "1234";
+$pass = "xamppadampa";
 
   $mbd = new PDO('mysql:host=localhost;dbname=lobotennis', $usuario, $pass);
 

@@ -2,9 +2,42 @@
   margin: 0;
 }
 
-.contenedor {
-  padding: 40px 20px;
-  border-right: 2px solid #c9c9c9;
+.wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.sidebar {
+  padding: 20px 0;
+  width: 250px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 999;
+  background: #303841;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.sidebar-header {
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.sidebar ul.components {
+  padding: 5px 0;
+  border-bottom: 1px solid #2185D5;
+}
+
+.sidebar ul li a {
+  padding: 10px 30px;
+  display: block;
+}
+
+.sidebar ul li a:hover {
+  color: #fff;
+  background: #2185D5;
 }
 
 
@@ -13,7 +46,7 @@
 }
 
 .tipo {
-  color: #5E5E5E;
+  color: #c9c9c9;
 }
 
 .recargar {
@@ -32,19 +65,56 @@
 }
 
 .lateral {
-  margin: 25px 0;
+  margin: 10px 0;
   border: none;
-  height: 35px;
   background-color: transparent;
-  color: #303841;
-  width: 80%;
+  color: #fff;
 
 }
 
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
 
-.lateral:hover {
-  border-bottom: 1px solid #2AC0E6;
-  color: #2AC0E6;
-  background-color: transparent;
+/* ----------- crear usuarios ----------- */
+.forma {
+  background-color: #fff;
+  height: 100vh;
+  padding: 9% 3%;
+}
 
+input,
+select,
+option {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  margin-top: 5%;
+  font-size: 18px;
+  padding: 5px;
+}
+
+select:invalid {
+  color: gray;
+}
+
+input[type=date] {
+  max-width: 100%;
+  margin-top: 0;
+  margin-bottom: 2%;
+
+}
+
+input[type=submit] {
+  background-color: #303841;
+  color: white;
+  border: 1px solid #303841;
+  margin-bottom: 2%;
+  font-weight: 500;
+}
+
+.content {
+  margin: 30px 17%;
 }
