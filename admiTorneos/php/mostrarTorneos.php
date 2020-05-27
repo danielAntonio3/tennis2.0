@@ -1,6 +1,11 @@
 <?php
 $usuario = 'root';
-$pass = "xamppadampa";
+
+#contrase de mysql joshua
+#$pass = "xamppadampa";
+#contrase de mysql daniel
+$pass = "1234";
+
 
   $mbd = new PDO('mysql:host=localhost;dbname=lobotennis', $usuario, $pass);
   $mbd->exec("SET NAMES 'utf8';");

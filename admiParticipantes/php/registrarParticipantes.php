@@ -1,7 +1,12 @@
 <?php
 
 $usuario = 'root';
-$pass = "";
+#contraseña de mysql de noe
+#$pass = "";
+#contraseña de mysql de joshua
+#$pass = "";
+#contraseña de mysql de daniel
+$pass = "1234";
 
 $mbd = new PDO('mysql:host=localhost;dbname=lobotennis', $usuario, $pass);
 
