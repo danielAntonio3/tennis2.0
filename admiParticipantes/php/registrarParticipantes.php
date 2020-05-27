@@ -28,9 +28,4 @@ $torneo=$_GET['torneo'];
       {echo "1";}
       else{echo"0";}
 
-
-
-
-
-
  ?>
