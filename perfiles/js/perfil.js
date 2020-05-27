@@ -6,15 +6,14 @@ $(document).ready(function() {
   //datos de los perfiles
   var nombreUser=$('#nombreUser');
   var tipo=$('#tipo');
-
   //BOTONES DE LA BARRA DE NAVEGACION
   var verTorneo=$('#verTorneo');
   var crearTorneo=$('#crearTorneo');
   var registrarUser=$('#registrarUser');
   var registrarJugadores=$('#registrarParticipantes');
   var actuPartido=$('#actuPartido');
-  
 
+  
 //funcion jala los datos de usuario
     function nombre(){
       $.ajax({
@@ -131,4 +130,9 @@ $(document).ready(function() {
       }
     });
   });
+
+
+
+  
+
 });
