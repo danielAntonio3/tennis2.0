@@ -5,7 +5,7 @@ $pass = "";
   $mbd = new PDO('mysql:host=localhost;dbname=lobotennis', $usuario, $pass);
   $mbd->exec("SET NAMES 'utf8';");
 
-      $query ="select * from Torneo";
+      $query ="select * from Torneo where estado=0";
       $stmt = $mbd->prepare($query);
       $stmt->execute();
 

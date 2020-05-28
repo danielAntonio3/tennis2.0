@@ -31,6 +31,7 @@ $(document).ready(function(){
                         if (respuesta==1) {
                             alert('correcta');
 
+
                             federacion.val();
                             licencia.val();
                             velocidad.val();
@@ -42,7 +43,9 @@ $(document).ready(function(){
                             torneo.val();
 
                         }else{
+                          console.log('El valor es '+respuesta);
                             alert('incorrecta');
+
                         }
                     }
                 });

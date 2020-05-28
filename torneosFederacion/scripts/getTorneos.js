@@ -27,7 +27,7 @@ $(document).ready(function () {
                     var tdmodalida=$('<td>/td>').text(modalidad_torneo);
                     var tdsede=$('<td>/td>').text(sede);
                     var td=$('<td></td>');
-                    var tdbotonEditar=$('<input></<input>').val('editar').attr('type','button').attr('id',id_torneo);
+                    var tdbotonEditar=$('<input></<input>').val('').attr('type','button').attr('id',id_torneo);
 
                         td.append(tdbotonEditar);
                         tbody.append(row);
