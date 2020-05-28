@@ -106,7 +106,7 @@
   
       function selecionado(e){
             alert("Editar torneo");
-            var ids=e.id;
+            var ids=('e='+e.id);
               console.log(ids);
               var contenedor = $('#recargar');
             $.ajax({
@@ -114,6 +114,16 @@
               success: function(datos) {
                   setTimeout(function() {
                     contenedor.html(datos);
+                    $.ajax({
+                      type: "get",
+                      url: "../admiTorneos/php/guardarIdTorneo.php",
+                      data: ids,
+                      success: function (respuesta) {
+                        if(respuesta != 0){
+                          console.log("listo id guardado");
+                        }
+                      }
+                    });
                     },200);
                   }
             });

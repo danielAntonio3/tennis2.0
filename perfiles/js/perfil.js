@@ -75,7 +75,7 @@ $(document).ready(function() {
     });
   });
 
-  /*PARA QUE CUANDO EL USUARIO*/
+  /*PARA QUE CUANDO EL USUARIO QUIERA VER UN TORNEO*/
   var verTorneo = $('#verTorneo');
 
   verTorneo.click(function() {
