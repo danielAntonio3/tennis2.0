@@ -9,6 +9,19 @@
   <script src="../perfiles/js/perfil.js"></script>
   <link rel="stylesheet" href="./css/perfil.css">
   <title>Perfil</title>
+
+
+
+  <style>
+        
+    .caja{
+        width: 200px;
+        height: 200px;
+        background: #000;
+        
+    }
+  </style>
+  
 </head>
 
 <body>
@@ -16,8 +29,8 @@
     <div class="sidebar">
       <div class="sidebar-header">
         <img src="" alt="" class="imagenPefil">
-        <h5 class="nombre" style=" padding-top: 15px">Nombre Apellido</h5>
-        <h6 class="tipo">Administrador</h6>
+        <h5 class="nombre" style=" padding-top: 15px" id="nombreUser">Nombre Apellido</h5>
+        <h6 class="tipo" id="tipo">Administrador</h6>
       </div>
       <ul class="nav flex-column">
         <li class="nav-item">
@@ -49,7 +62,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="lateral">
+          <a class="lateral" id="">
             <svg class="bi bi-award-fill" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
               <path d="M8 0l1.669.864 1.858.282.842 1.68 1.337 1.32L13.4 6l.306 1.854-1.337 1.32-.842 1.68-1.858.282L8 12l-1.669-.864-1.858-.282-.842-1.68-1.337-1.32L2.6 6l-.306-1.854 1.337-1.32.842-1.68L6.331.864 8 0z" />
               <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z" />
@@ -57,7 +70,7 @@
             Ver partidos
           </a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" id="proXPartido">
           <a class="lateral">
             <svg class="bi bi-calendar3" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z" />
@@ -67,7 +80,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="lateral">
+          <a class="lateral"id="actuPartido" >
             <svg class="bi bi-arrow-clockwise" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" d="M3.17 6.706a5 5 0 0 1 7.103-3.16.5.5 0 1 0 .454-.892A6 6 0 1 0 13.455 5.5a.5.5 0 0 0-.91.417 5 5 0 1 1-9.375.789z" />
               <path fill-rule="evenodd" d="M8.147.146a.5.5 0 0 1 .707 0l2.5 2.5a.5.5 0 0 1 0 .708l-2.5 2.5a.5.5 0 1 1-.707-.708L10.293 3 8.147.854a.5.5 0 0 1 0-.708z" />
@@ -88,6 +101,37 @@
     <div style="width: calc(100% - 251px);" id="recargar" style="padding: 0;">
     </div>
   </div>
+
+<script>
+  
+      function selecionado(e){
+            alert("Editar torneo");
+            var ids=('e='+e.id);
+              console.log(ids);
+              var contenedor = $('#recargar');
+            $.ajax({
+              url: "../admiTorneos/ActualizarTornoe.html",
+              success: function(datos) {
+                  setTimeout(function() {
+                    contenedor.html(datos);
+                    $.ajax({
+                      type: "get",
+                      url: "../admiTorneos/php/guardarIdTorneo.php",
+                      data: ids,
+                      success: function (respuesta) {
+                        if(respuesta != 0){
+                          console.log("listo id guardado");
+                        }
+                      }
+                    });
+                    },200);
+                  }
+            });
+      }
+ 
+</script>
+
+
 </body>
 
 </html>

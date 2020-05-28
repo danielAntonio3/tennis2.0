@@ -1,6 +1,7 @@
 $(document).ready(function () {
-    
-        var tbody=$('#body');
+
+        var selector=$('#selector');
+        
 
         function logic() {
             $.ajax({
@@ -11,7 +12,7 @@ $(document).ready(function () {
                     var js = JSON.parse(respuesta);
                     console.log(js);
                     var tamarreglo=js.length;
-                    console.log(tamarreglo);
+                    //console.log(tamarreglo);
                     
                     for (x=0; x<tamarreglo; x++){ 
                     var id_torneo= js[x].id_torneo;
@@ -21,29 +22,22 @@ $(document).ready(function () {
                     var modalidad_torneo=js[x].modalidad_torneo;
                     var sede =js[x].sede;
 
-                    var row=$('<tr></tr>');
-                    var tdfecha=$('<td>/td>').text(fecha_inicio+'-'+fecha_fin);
-                    var tdnombre=$('<td>/td>').text(nombre_torneo);
-                    var tdmodalida=$('<td>/td>').text(modalidad_torneo);
-                    var tdsede=$('<td>/td>').text(sede);
-                    var td=$('<td></td>');
-                    var tdbotonEditar=$('<input></<input>').val('editar').attr('type','button').attr('id',id_torneo);
+                    
+                    var div=$('<div></div>').attr('id',id_torneo).attr('class','divs').attr('onclick','selecionado(this)');
+                    var Titulo=$('<span></span>').text('Nombre: '+nombre_torneo);
+                    var fechas=$('<span></span>').text('Fecha inicio: '+fecha_inicio+"--"+'Fecha Final: '+fecha_fin);
+                    var sedes=$('<span></span>').text('Sede: '+sede);
 
-                        td.append(tdbotonEditar);
-                        tbody.append(row);
-                        row.append(tdfecha);
-                        row.append(tdnombre);
-                        row.append(tdmodalida);
-                        row.append(tdsede);
-                        row.append(td);
+                    selector.append(div);
+                    div.append(Titulo);
+                    div.append(fechas);
+                    div.append(sedes);
+            
                     }
                 }
             });
         }
 
         logic();
-
         
-
-
 });

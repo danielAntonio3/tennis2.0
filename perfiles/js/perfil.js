@@ -2,6 +2,63 @@ $(document).ready(function() {
 
   var registrarUser = $('#registrarUser');
   var contenedor = $('#recargar');
+  
+  //datos de los perfiles
+  var nombreUser=$('#nombreUser');
+  var tipo=$('#tipo');
+  //BOTONES DE LA BARRA DE NAVEGACION
+  var verTorneo=$('#verTorneo');
+  var crearTorneo=$('#crearTorneo');
+  var registrarUser=$('#registrarUser');
+  var registrarJugadores=$('#registrarParticipantes');
+  var actuPartido=$('#actuPartido');
+
+  
+//funcion jala los datos de usuario
+    function nombre(){
+      $.ajax({
+        url: "./php/nombreUser.php",
+        success: function (respuesta) {
+          var js = JSON.parse(respuesta);
+          console.log(js);
+          var nombre= js[0].nombre;
+          var apellidos=js[0].apellidos;
+          nombreUser.text(nombre+" "+apellidos);
+        }
+      });
+    }
+
+    nombre();
+
+    //para poner la el rol de el usuario logiado
+    function oculto(){
+      alert("hola");
+      $.ajax({
+        url: "./php/perfil.php",
+        success: function (respuesta) {
+          if(respuesta==1){
+            //eres administrador
+            tipo.text("Administrador");
+            actuPartido.hide(); verTorneo.show(); crearTorneo.show(); registrarUser.show();
+            registrarJugadores.hide();
+          }if(respuesta==2){
+            //eres monitor
+            tipo.text("Monitor"); actuPartido.show(); verTorneo.hide(); crearTorneo.hide();
+            registrarJugadores.hide();
+          }if(respuesta==3){
+            //eres Federacion
+            tipo.text("Federacion");verTorneo.hide(); crearTorneo.hide();
+            registrarUser.hide(); registrarJugadores.show(); actuPartido.hide();
+          }if(respuesta==4){
+            tipo.text("Jugador"); verTorneo.hide(); crearTorneo.hide(); registrarJugadores.hide();
+            registrarUser.hide(); actuPartido.hide();
+          }
+        }
+      });
+    }
+
+    oculto();
+
   registrarUser.click(function() {
     alert("crear usuarios");
     var espera = 200;
@@ -18,7 +75,7 @@ $(document).ready(function() {
     });
   });
 
-  /*PARA QUE CUANDO EL USUARIO*/
+  /*PARA QUE CUANDO EL USUARIO QUIERA VER UN TORNEO*/
   var verTorneo = $('#verTorneo');
 
   verTorneo.click(function() {
@@ -73,4 +130,9 @@ $(document).ready(function() {
       }
     });
   });
+
+
+
+  
+
 });

@@ -13,7 +13,7 @@ $(document).ready(function() {
       var datos = ('correo=' + email.val() + '&contrasena=' + contrasena.val())
       console.log(datos);
       $.ajax({
-        type: "post",
+        type: "get",
         url: "../inicioSesion/php/iniciarSesion.php",
         data: datos,
         success: function(respuestas) {

@@ -1,4 +1,10 @@
 <?php
+ 
+session_start();
+$e=$_SESSION['e'];
+
+#echo "hola bebe.$e";  
+
 $usuario = 'root';
 
 #contrase de mysql joshua
@@ -10,7 +16,7 @@ $pass = "1234";
   $mbd = new PDO('mysql:host=localhost;dbname=lobotennis', $usuario, $pass);
   $mbd->exec("SET NAMES 'utf8';");
 
-      $query ="select *from Torneo";
+      $query ="select *from Torneo where id_torneo='".$e."'";
       $stmt = $mbd->prepare($query);
       $stmt->execute();
       
@@ -28,4 +34,5 @@ $pass = "1234";
          );
      }
      echo json_encode($res);
+
 ?>
