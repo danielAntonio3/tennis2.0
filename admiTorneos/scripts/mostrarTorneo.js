@@ -23,15 +23,16 @@ $(document).ready(function () {
                     var sede =js[x].sede;
 
                     
-                    var div=$('<div></div>').attr('id',id_torneo).attr('class','divs').text("dame un click").attr('onclick','selecionado(this)');
-                    var Titulo=$('<span></span>').text(nombre_torneo);
-                    var fechas=$('<span></span>').text(fecha_inicio);
-                    var sedes=$('<span></span>').text(sede);
+                    var div=$('<div></div>').attr('id',id_torneo).attr('class','divs').attr('onclick','selecionado(this)');
+                    var Titulo=$('<span></span>').text('Nombre: '+nombre_torneo);
+                    var fechas=$('<span></span>').text('Fecha inicio: '+fecha_inicio+"--"+'Fecha Final: '+fecha_fin);
+                    var sedes=$('<span></span>').text('Sede: '+sede);
 
                     selector.append(div);
                     div.append(Titulo);
-                    
-                    
+                    div.append(fechas);
+                    div.append(sedes);
+            
                     }
                 }
             });

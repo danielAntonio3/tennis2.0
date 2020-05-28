@@ -105,10 +105,18 @@
 <script>
   
       function selecionado(e){
+            alert("Editar torneo");
             var ids=e.id;
-            //var formulario=document.getElementById(ids);
               console.log(ids);
-            //formulario.submit();
+              var contenedor = $('#recargar');
+            $.ajax({
+              url: "../admiTorneos/ActualizarTornoe.html",
+              success: function(datos) {
+                  setTimeout(function() {
+                    contenedor.html(datos);
+                    },200);
+                  }
+            });
       }
  
 </script>
