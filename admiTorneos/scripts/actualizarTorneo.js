@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    
+
     var nombre =$('#nombre');
     var modalidad=$('#modalidad');
     var sede=$('#sede');
@@ -22,18 +22,18 @@ $(document).ready(function () {
                     var fecha_fin=js[0].fecha_fin;
                     var modalidad_torneo=js[0].modalidad_torneo;
                     var sedes =js[0].sede;
-                    
+
                     //console.log(modalidad.val());
-                    
-                    if(modalidad.val()==null){                
+
+                    if(modalidad.val()==null){
                     modalidad.val(modalidad_torneo);
                     }
-                    
+
                     nombre.val(nombre_torneo);
                     sede.val(sedes);
                     fechaIni.val(fecha_inicio);
                     fechaFin.val(fecha_fin);
-                
+
             }
         });
     }
@@ -41,12 +41,12 @@ $(document).ready(function () {
     regresoDatos();
 
 
-     
+
         actualizar.click(function(e){
             e.preventDefault();
                 var datos = ('nombre='+nombre.val()+'&modalidad='+modalidad.val()+
                     '&sede='+sede.val()+'&fechaInicio='+fechaIni.val()+'&fechaFin='+fechaFin.val());
-            alert(datos);   
+            alert(datos);
         $.ajax({
             type: 'get',
             url: '../admiTorneos/php/actualizarTorneo.php',

@@ -1,5 +1,9 @@
 <?php
 
+
+session_start();
+$e=$_SESSION['e'];
+
 $usuario = 'root';
 $pass = "";
 mysql_connect("localhost","root","","lobotennis");

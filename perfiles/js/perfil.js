@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   var registrarUser = $('#registrarUser');
   var contenedor = $('#recargar');
-  
+
   //datos de los perfiles
   var nombreUser=$('#nombreUser');
   var tipo=$('#tipo');
@@ -13,7 +13,7 @@ $(document).ready(function() {
   var registrarJugadores=$('#registrarParticipantes');
   var actuPartido=$('#actuPartido');
 
-  
+
 //funcion jala los datos de usuario
     function nombre(){
       $.ajax({
@@ -119,7 +119,7 @@ $(document).ready(function() {
     alert("registrar participantes");
     var espera = 200;
     $.ajax({
-      url: "../admiTorneos/tablaTorneos.html",
+      url: "../admiParticipantes/tablaTorneosP.html",
       beforeSend: function() {
         contenedor.text('Cargando...');
       },
@@ -133,6 +133,6 @@ $(document).ready(function() {
 
 
 
-  
+
 
 });
