@@ -24,6 +24,7 @@ var fechaFin=$('#fechaFin');
             data: datos,
             success: function (respuesta) {
                 if (respuesta==1) {
+                    alert("los datos se gusardaron con exitos")
                     console.log("los dato se gusardaron con exito");
                     //alert('correcta');
                     nombre.val('');
@@ -35,6 +36,7 @@ var fechaFin=$('#fechaFin');
                     fechaFin.val('');
 
                 }else{
+                    alert("Error al guardar los datos");
                     console.log("erro al guardar los datos");
                     
                     //alert('incorrecta');
