@@ -12,6 +12,7 @@ $(document).ready(function() {
   var registrarUser=$('#registrarUser');
   var registrarJugadores=$('#registrarParticipantes');
   var actuPartido=$('#actuPartido');
+  var menuPrincipal=$('#menuPrincipal');
 
   
 //funcion jala los datos de usuario
@@ -32,7 +33,7 @@ $(document).ready(function() {
 
     //para poner la el rol de el usuario logiado
     function oculto(){
-      alert("hola");
+      //alert("hola");
       $.ajax({
         url: "./php/perfil.php",
         success: function (respuesta) {
@@ -60,7 +61,7 @@ $(document).ready(function() {
     oculto();
 
   registrarUser.click(function() {
-    alert("crear usuarios");
+    //alert("crear usuarios");
     var espera = 200;
     $.ajax({
       url: "../crearUsuarios/crearUsuarios.html",
@@ -79,7 +80,7 @@ $(document).ready(function() {
   var verTorneo = $('#verTorneo');
 
   verTorneo.click(function() {
-    alert("tabla torneos");
+    //alert("tabla torneos");
     var espera = 200;
     $.ajax({
       url: "../admiTorneos/tablaTorneos.html",
@@ -97,7 +98,7 @@ $(document).ready(function() {
   /*PARA QUE CUANDO EL admin quiere crear nuevo torneo*/
   var crearTorneo = $('#crearTorneo');
   crearTorneo.click(function() {
-    alert("crear torneo ");
+    //alert("crear torneo ");
     var espera = 200;
     $.ajax({
       url: "../admiTorneos/registrarTorneo.html",
@@ -116,7 +117,7 @@ $(document).ready(function() {
   var regParticipantes = $('#registrarParticipantes');
 
   regParticipantes.click(function() {
-    alert("registrar participantes");
+    //alert("registrar participantes");
     var espera = 200;
     $.ajax({
       url: "../admiTorneos/tablaTorneos.html",
@@ -131,6 +132,11 @@ $(document).ready(function() {
     });
   });
 
+      menuPrincipal.click(function(){
+
+          
+
+      });
 
 
   

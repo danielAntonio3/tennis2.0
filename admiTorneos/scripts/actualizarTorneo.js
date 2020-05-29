@@ -7,7 +7,6 @@ $(document).ready(function () {
     var fechaFin=$('#fechaFin');
     var actualizar=$('#actualizar');
 
-    alert("si funciona");
 
     function regresoDatos(){
 
@@ -46,7 +45,7 @@ $(document).ready(function () {
             e.preventDefault();
                 var datos = ('nombre='+nombre.val()+'&modalidad='+modalidad.val()+
                     '&sede='+sede.val()+'&fechaInicio='+fechaIni.val()+'&fechaFin='+fechaFin.val());
-            alert(datos);   
+            //alert(datos);   
         $.ajax({
             type: 'get',
             url: '../admiTorneos/php/actualizarTorneo.php',

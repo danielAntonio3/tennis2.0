@@ -23,7 +23,7 @@ $pass="1234";
 
     $queryInsert ="UPDATE Torneo SET nombre_torneo='".$nombre."', modalidad_torneo='".$modalidad."',
                     sede='".$sede."', fecha_inicio='".$fechaInicio."' , fecha_fin='".$fechaFin."' WHERE id_torneo='".$e."'";
-
+        #echo "$queryInsert";
           if($mbd->exec($queryInsert)==true){
                      echo "1";
             }
@@ -33,6 +33,6 @@ $pass="1234";
         
    
 
-  session_destroy();
+  #session_destroy();
     
 ?>
