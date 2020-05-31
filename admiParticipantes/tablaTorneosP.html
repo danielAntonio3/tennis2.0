@@ -11,13 +11,34 @@
   <title>Torneos activos</title>
   <style>
 
-    .divs{
-        width: 200px;
-        height: 200px;
-        background: #000;
-        color: white;
+  .card {
+    flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 240px;
+    height: 175px;
+    background: #F0F0F0;
+    padding-left: 25px;
+    /*color: balck;*/
 
-    }
+  }
+
+  .label {
+    background-color: #1389C6;
+    min-width: 35px;
+    height: 175px;
+    left: 0;
+    position: absolute;
+  }
+
+  .conte {
+    padding: 30px 30px;
+    flex: 1 1 auto;
+
+  }
+
+  .details {
+    padding-top: 30px;
+  }
   </style>
 </head>
 
@@ -29,13 +50,24 @@
     </a>
   </nav>
   <div class="content">
-    <h2 style="text-align:center;">Torneos</h2>
-    <br>
-
-    <section id="selector" class="cont">
-
-
-    </section>
+    <div class="content">
+      <h2 style="text-align:center;">Torneos</h2>
+      <br>
+      <section id="selector" class="cont">
+        <div id="id_torneo" class="card">
+          <div class="label"></div>
+          <div class="conte">
+            <span id="nombreTorneo">
+              <h4><b>Copa Davis</b></h4>
+            </span>
+            <div class="details">
+              <span id="fechaTorneo">Jul. 25 - Nov. 13</span>
+              <span id="sede">Loquesea, Londres</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   </div>
 </body>
 

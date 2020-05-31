@@ -24,14 +24,26 @@ $(document).ready(function () {
 
 
                     var div=$('<div></div>').attr('id',id_torneo).attr('class','divs').attr('onclick','selecionado2(this)');
-                    var Titulo=$('<span></span>').text('Nombre: '+nombre_torneo);
-                    var fechas=$('<span></span>').text('Fecha inicio: '+fecha_inicio+"--"+'Fecha Final: '+fecha_fin);
-                    var sedes=$('<span></span>').text('Sede: '+sede);
+                    var divColor = $('<div></div>').attr('class', 'label');
+                    var divContenido = $('<div></div>').attr('class', 'conte');
+                    var divTitulo = $('<span></span>').attr('id', 'nombreTorneo');
+                    var encabezadoT = $('<h4></h4>');
+                    var tipoLetra = $('<b></b>').text('');
+                    var divDetalles = $('<div></div>').attr('class', 'details');
+                    var fechas = $('<span></span>').attr('id', 'fechaTorneo').text('' + "  " + '');
+                    var saltoLinea = $('<br>');
+                    var sedes = $('<span></span>').attr('id', 'sede').text('');
 
                     selector.append(div);
-                    div.append(Titulo);
-                    div.append(fechas);
-                    div.append(sedes);
+                    div.append(divColor);
+                    div.append(divContenido);
+                    divContenido.append(divTitulo);
+                    divTitulo.append(encabezadoT);
+                    encabezadoT.append(tipoLetra);
+                    divContenido.append(divDetalles);
+                    divDetalles.append(fechas);
+                    divDetalles.append(saltoLinea);
+                    divDetalles.append(sedes);
 
                     }
                 }

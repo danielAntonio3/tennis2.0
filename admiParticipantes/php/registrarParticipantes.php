@@ -2,7 +2,7 @@
 
 
 session_start();
-$e=$_SESSION['e'];
+$v=$_SESSION['v'];
 
 $usuario = 'root';
 $pass = "";
@@ -24,9 +24,19 @@ $ranking=$_GET['ranking'];
 $usuario=$_GET['usuario'];
 $torneo=$_GET['torneo'];
 
+$queryUsuario="Select id_user from Usuario where nombre_user='$usuario'";
+
+
+
+
+  $resUser=mysql_query($queryUsuario);
+  $rowUser=mysql_fetch_assoc($resUser);
+  $usuario=$rowUser['id_user'];
+
   $queryInsert ="insert into Jugador(federacion,licensia,velocidad,
   puntos_promedio,fuerza,encuentros_jugados,ranking_atp,user_id,torneo_id)
     values('$federacion','$licencia','$velocidad','$puntos','$fuerza','$encuentros','$ranking','$usuario','$torneo')";
+
     if(mysql_query($queryInsert)){
       $querycount="Select COUNT(id_jugador) as total from Jugador where torneo_id='$torneo'";
         $valor="";
@@ -51,6 +61,7 @@ $torneo=$_GET['torneo'];
 
 
     }
+
     else{
 
 
