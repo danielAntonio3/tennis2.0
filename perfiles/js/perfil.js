@@ -134,8 +134,8 @@ $(document).ready(function() {
 
       menuPrincipal.click(function(){
 
+        window.location.replace('../principal/principal.html');
           
-
       });
 
 
