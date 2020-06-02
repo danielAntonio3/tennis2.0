@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="../0.-jquery/jquery-3.4.1.min.js"></script>
+    <script src="../asignarPartidos/scripts/asignarPartidos.js"></script>
+    <link rel="stylesheet" href="../admiParticipantes/css/estilos.css">
+    <title>Partidos</title>
+  </head>
+  <style>
+    .content{
+      margin-top: 20%;
+    }
+  </style>
+  <body>
+
+    <div class="content">
+      <div class="row justify-content-around">
+      <img src="../imagenes/LogoTenis.png" alt="imagen" height="200" width="200" class="rounded" id="ij1">
+      <img src="../imagenes/LogoTenis.png" alt="imagen" height="200" width="200" class="rounded">
+      </div>
+      <div class="row justify-content-around">
+        <select class="col-3" name="" id="jugador1">
+          <option value="Hola">Hola</option>
+          <option value="Adios">Adios</option>
+        </select>
+        <select class="col-3" name="" id="jugador2">
+          <option value=""></option>
+        </select>
+      </div>
+        <label for="fecha">Fecha de encuentro</label>
+        <input type="date" name="fecha" id="fechaPartido" value="">
+        <select class="" name="" id="tpartido">
+          <option value="">Tipo de encuentro</option>
+        </select>
+        <select class="" name="" id="cancha">
+          <option value="">Cancha</option>
+        </select>
+        <select class="" name="" id="monitor">
+          <option value="">Monitor</option>
+        </select>
+        <input type="submit" name="botonpartido" id="regPartido" value="Agendar">
+
+
+
+
+
+    </div>
+
+  </body>
+</html>

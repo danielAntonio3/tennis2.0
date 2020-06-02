@@ -24,18 +24,18 @@ $ranking=$_GET['ranking'];
 $usuario=$_GET['usuario'];
 $torneo=$_GET['torneo'];
 
-$queryUsuario="Select id_user from Usuario where nombre_user='$usuario'";
+$queryUsuario="Select id_user from Usuario where nombre='$usuario'";
 
 
 
 
   $resUser=mysql_query($queryUsuario);
   $rowUser=mysql_fetch_assoc($resUser);
-  $usuario=$rowUser['id_user'];
+  $usuarioid=$rowUser['id_user'];
 
   $queryInsert ="insert into Jugador(federacion,licensia,velocidad,
   puntos_promedio,fuerza,encuentros_jugados,ranking_atp,user_id,torneo_id)
-    values('$federacion','$licencia','$velocidad','$puntos','$fuerza','$encuentros','$ranking','$usuario','$torneo')";
+    values('$federacion','$licencia','$velocidad','$puntos','$fuerza','$encuentros','$ranking','$usuarioid','$torneo')";
 
     if(mysql_query($queryInsert)){
       $querycount="Select COUNT(id_jugador) as total from Jugador where torneo_id='$torneo'";

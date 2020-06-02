@@ -50,9 +50,11 @@ $(document).ready(function() {
             //eres Federacion
             tipo.text("Federacion");verTorneo.hide(); crearTorneo.hide();
             registrarUser.hide(); registrarJugadores.show(); actuPartido.hide();
+            agendarPartidos.show();
           }if(respuesta==4){
             tipo.text("Jugador"); verTorneo.hide(); crearTorneo.hide(); registrarJugadores.hide();
             registrarUser.hide(); actuPartido.hide();
+            agendarPartidos.hide();
           }
         }
       });
@@ -132,9 +134,28 @@ $(document).ready(function() {
     });
   });
 
+
+
+    var agendarPartidos=$('#agendarPartidos');
+
+    agendarPartidos.click(function() {
+      var espera = 200;
+      $.ajax({
+        url: "../asignarPartidos/torneosA.html",
+        beforeSend: function() {
+          contenedor.text('Cargando...');
+        },
+        success: function(datos) {
+          setTimeout(function() {
+            contenedor.html(datos);
+          }, espera);
+        }
+      });
+    });
+
       menuPrincipal.click(function(){
 
-          
+
 
       });
 
