@@ -8,35 +8,45 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <script src="../0.-jquery/jquery-3.4.1.min.js"></script>
   <script src="../admiTorneos/scripts/mostrarTorneo.js"></script>
-  <title>Atualizar torneo</title>
+  <title>Actualizar torneo</title>
   <style>
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #E8E8E8;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
   .card {
     flex-direction: column;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    width: 240px;
+    width: 260px;
     height: 175px;
     background: #F0F0F0;
     padding-left: 25px;
     /*color: balck;*/
-
+    margin: 15px;
+    cursor: pointer;
   }
 
   .label {
-    background-color: #1389C6;
+    background-color: #2185D5;
     min-width: 35px;
-    height: 175px;
+    height: 174px;
     left: 0;
     position: absolute;
   }
 
   .conte {
-    padding: 30px 30px;
+    padding: 25px 30px;
     flex: 1 1 auto;
 
   }
 
   .details {
-    padding-top: 30px;
+    padding-top: 20px;
+    font-size: 15px;
   }
   </style>
 </head>
@@ -48,10 +58,46 @@
       Master Tenis
     </a>
   </nav>
-  <div class="content">
+  <div class="contentTorneos">
     <h2 style="text-align:center;">Torneos</h2>
     <br>
-    <section id="selector" class="cont">
+    <section id="selector" class="grid-container" style="padding:auto;">
+      <div id="id_torneo" class="card">
+        <div class="label"></div>
+        <div class="conte">
+          <span id="nombreTorneo">
+            <h4><b>London Open</b></h4>
+          </span>
+          <div class="details">
+            <span id="fechaTorneo">Jul. 25 - Nov. 13</span>
+            <span id="sede">Loquesea, Londres</span>
+          </div>
+        </div>
+      </div>
+      <div id="id_torneo" class="card">
+        <div class="label"></div>
+        <div class="conte">
+          <span id="nombreTorneo">
+            <h4><b>London Open</b></h4>
+          </span>
+          <div class="details">
+            <span id="fechaTorneo">Jul. 25 - Nov. 13</span>
+            <span id="sede">Loquesea, Londres</span>
+          </div>
+        </div>
+      </div>
+      <div id="id_torneo" class="card">
+        <div class="label"></div>
+        <div class="conte">
+          <span id="nombreTorneo">
+            <h4><b>London Open</b></h4>
+          </span>
+          <div class="details">
+            <span id="fechaTorneo">Jul. 25 - Nov. 13</span>
+            <span id="sede">Loquesea, Londres</span>
+          </div>
+        </div>
+      </div>
       <div id="id_torneo" class="card">
         <div class="label"></div>
         <div class="conte">
