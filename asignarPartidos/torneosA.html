@@ -4,39 +4,52 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../admiParticipantes/css/estilos.css">
+  <link rel="stylesheet" href="../admiTorneos/css/estilos.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <script src="../0.-jquery/jquery-3.4.1.min.js"></script>
-  <script src="../asignarPartidos/scripts/verTorneo.js"></script>
-  <title>Torneos activos</title>
+  <script src="../admiTorneos/scripts/mostrarTorneo.js"></script>
+  <title>Actualizar torneo</title>
   <style>
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #E8E8E8;
+    padding: 10px;
+    border-radius: 5px;
+    min-height: 440px;
+    max-height: 440px;
+    overflow-y: auto;
+  }
+
   .card {
     flex-direction: column;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    width: 240px;
+    width: 260px;
     height: 175px;
     background: #F0F0F0;
     padding-left: 25px;
     /*color: balck;*/
-
+    margin: 15px;
+    cursor: pointer;
   }
 
   .label {
-    background-color: #1389C6;
+    background-color: #2185D5;
     min-width: 35px;
-    height: 175px;
+    height: 174px;
     left: 0;
     position: absolute;
   }
 
   .conte {
-    padding: 30px 30px;
+    padding: 25px 30px;
     flex: 1 1 auto;
 
   }
 
   .details {
-    padding-top: 30px;
+    padding-top: 20px;
+    font-size: 15px;
   }
   </style>
 </head>
@@ -48,25 +61,31 @@
       Master Tenis
     </a>
   </nav>
-    <div class="content">
-      <h2 style="text-align:center;">Torneos</h2>
-      <br>
-      <section id="selector" class="cont">
-        <div id="id_torneo" class="card">
-          <div class="label"></div>
-          <div class="conte">
-            <span id="nombreTorneo">
-              <h4><b>Copa Davis</b></h4>
-            </span>
-            <div class="details">
-              <span id="fechaTorneo">Jul. 25 - Nov. 13</span>
-              <span id="sede">Loquesea, Londres</span>
-            </div>
-          </div>
-        </div>
-      </section>
+  <div class="contentTorneos">
+    <h2 style="text-align:center;">Torneos</h2>
+    <br>
+    <section id="selector" class="grid-container" style="padding:auto;">
+    </section>
   </div>
 </body>
-
-
-</html>
+<!--
+    <table class="container-fluid overflow-auto">
+      <thead class="theader">
+        <tr>
+          <th>Fecha</th>
+          <th>Torneo</th>
+          <th>Modalidad</th>
+          <th>Sede</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+      <tbody id="body" onchange="selecionado(this.value)">
+      </tbody>
+    </table>-->
+<!-- <div class="botonCrearMas">
+      <button onclick="location.href='../admiTorneos/registrarTorneo.html';">
+        <svg class="shadow-lg rounded rounded-circle bi bi-plus-circle-fill" width="45px" height="45px" viewBox="0 0 16 16" fill="#2185D5" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M16 8A8 8 0 110 8a8 8 0 0116 0zM8.5 4a.5.5 0 00-1 0v3.5H4a.5.5 0 000 1h3.5V12a.5.5 0 001 0V8.5H12a.5.5 0 000-1H8.5V4z" clip-rule="evenodd" />
+        </svg>
+      </button>
+    </div> -->

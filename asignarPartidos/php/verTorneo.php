@@ -3,8 +3,8 @@
 $usuario = 'root';
 
 #contrase de mysql joshua
-#$pass = "xamppadampa";
-#contrase de mysql daniel
+// $pass = "xamppadampa";
+// contrase de mysql daniel
 $pass = "";
 
 
