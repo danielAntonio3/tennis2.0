@@ -10,14 +10,15 @@
   <script src="../admiParticipantes/scripts/mostrarTorneoP.js"></script>
   <title>Torneos activos</title>
   <style>
-
   .card {
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    width: 240px;
-    height: 175px;
+    width: 300px;
+    height: 200px;
     background: #F0F0F0;
     padding-left: 25px;
+    padding-top: -2px;
     /*color: balck;*/
 
   }
@@ -25,7 +26,7 @@
   .label {
     background-color: #1389C6;
     min-width: 35px;
-    height: 175px;
+    height: 199px;
     left: 0;
     position: absolute;
   }
@@ -50,46 +51,24 @@
     </a>
   </nav>
   <div class="content">
-    <div class="content">
-      <h2 style="text-align:center;">Torneos</h2>
-      <br>
-      <section id="selector" class="cont">
-        <div id="id_torneo" class="card">
-          <div class="label"></div>
-          <div class="conte">
-            <span id="nombreTorneo">
-              <h4><b>Copa Davis</b></h4>
-            </span>
-            <div class="details">
-              <span id="fechaTorneo">Jul. 25 - Nov. 13</span>
-              <span id="sede">Loquesea, Londres</span>
-            </div>
+    <h2 style="text-align:center;">Torneos</h2>
+    <br>
+    <section id="selector" class="cont">
+      <div id="id_torneo" class="card">
+        <div class="label"></div>
+        <div class="conte">
+          <span id="nombreTorneo">
+            <h4><b>Test</b></h4>
+          </span>
+          <div class="details">
+            <span id="fechaTorneo">Jul. 25 - Nov. 13</span><br>
+            <span id="sede">Loquesea, De Whereva</span>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   </div>
 </body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!--
     <table class="container-fluid overflow-auto">
       <thead class="theader">
@@ -104,7 +83,7 @@
       <tbody id="body" onchange="selecionado(this.value)">
       </tbody>
     </table>-->
-    <!-- <div class="botonCrearMas">
+<!-- <div class="botonCrearMas">
       <button onclick="location.href='../admiTorneos/registrarTorneo.html';">
         <svg class="shadow-lg rounded rounded-circle bi bi-plus-circle-fill" width="45px" height="45px" viewBox="0 0 16 16" fill="#2185D5" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" d="M16 8A8 8 0 110 8a8 8 0 0116 0zM8.5 4a.5.5 0 00-1 0v3.5H4a.5.5 0 000 1h3.5V12a.5.5 0 001 0V8.5H12a.5.5 0 000-1H8.5V4z" clip-rule="evenodd" />
