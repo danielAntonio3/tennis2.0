@@ -49,7 +49,10 @@ $(document).ready(function () {
                 }
             });
         }
+      }
+    });
+  }
 
-        logic();
+  logic();
 
 });

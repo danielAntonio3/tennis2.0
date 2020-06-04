@@ -5,8 +5,8 @@ session_start();
 $v=$_SESSION['v'];
 
 $usuario = 'root';
-$pass = "";
-mysql_connect("localhost","root","","lobotennis");
+$pass = "1234";
+mysql_connect("localhost","root","1234","lobotennis");
 //$mbd = new PDO('mysql:host=localhost;dbname=lobotennis', $usuario, $pass);
 if (!mysql_select_db("lobotennis")) {
   echo "No seleccionada ".mysql_error();

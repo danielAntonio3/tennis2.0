@@ -133,7 +133,9 @@ $(document).ready(function() {
       }
     });
   });
-
+  menuPrincipal.click(function(){
+    window.location.replace('../principal/principal.html'); 
+  });
 
 
      agendarPartidos=$('#agendarPartidos');
@@ -153,11 +155,10 @@ $(document).ready(function() {
       });
     });
 
-      menuPrincipal.click(function(){
+      
 
 
-
-      });
+     
 
       actuPartido=$('#actuPartido');
 
