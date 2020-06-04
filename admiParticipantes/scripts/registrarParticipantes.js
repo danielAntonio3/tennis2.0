@@ -17,18 +17,16 @@ alert('Si funciona');
                 url: "../admiParticipantes/php/getDatos.php",
                 success: function (respuesta) {
                     var js = JSON.parse(respuesta);
-                        //console.log(js);
+                        console.log(js);
                         var id_torneo= js[0].id_torneo;
                         var nombre_torneo=js[0].nombre_torneo;
 
 
                         //console.log(modalidad.val());
 
-                        if(modalidad.val()==null){
-                        modalidad.val(modalidad_torneo);
-                        }
 
-                        torneo.val(id_torneo);
+
+                        torneo.val('1');
                         console.log('El id del torneo es '+id_torneo);
 
                 }
@@ -55,11 +53,11 @@ obtenerDatos();
 
                 $.ajax({
                     type: 'get',
-                    url: './php/registrarParticipantes.php',
+                    url: '../admiParticipantes/php/registrarParticipantes.php',
                     data: datos,
                     success: function (respuesta) {
                         if (respuesta==1) {
-                            alert('correcta');
+                            alert('El usuario ha sido agregado');
 
 
                             federacion.val();
@@ -74,7 +72,7 @@ obtenerDatos();
 
                         }else{
                           console.log('El valor es '+respuesta);
-                            alert('incorrecta');
+                            
 
                         }
                     }
