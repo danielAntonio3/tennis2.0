@@ -3,8 +3,7 @@
 session_start();
 $b=$_SESSION['b'];
 
-$usuario = 'root';
-$pass = "";
+
 
 $usuario = 'root';
 $pass = "";
