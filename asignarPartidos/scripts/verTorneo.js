@@ -11,9 +11,8 @@ $(document).ready(function(){
       url: "../asignarPartidos/php/verTorneo.php",
       success: function(respuesta) {
         var js = JSON.parse(respuesta);
-        console.log(js);
         var tamarreglo = js.length;
-        //console.log(tamarreglo);
+        console.log(tamarreglo);
 
         for (x = 0; x < tamarreglo; x++) {
           var id_torneo = js[x].id_torneo;
@@ -45,6 +44,7 @@ $(document).ready(function(){
           divDetalles.append(fechas);
           divDetalles.append(saltoLinea);
           divDetalles.append(sedes);
+
         }
       }
     });

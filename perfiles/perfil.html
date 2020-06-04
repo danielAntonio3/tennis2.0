@@ -189,6 +189,31 @@
             });
       }
 
+      function selecionado4(c){
+
+            var ids=('c='+c.id);
+              console.log(ids+'');
+              var contenedor = $('#recargar');
+            $.ajax({
+              url: "../actualizarPartidos/actualizarPartidos.html",
+              success: function(datos) {
+                  setTimeout(function() {
+                    contenedor.html(datos);
+                    $.ajax({
+                      type: "get",
+                      url: "../actualizarPartidos/php/devolverId.php",
+                      data: ids,
+                      success: function (respuesta) {
+                        if(respuesta != 0){
+                          console.log("listo id guardado");
+                        }
+                      }
+                    });
+                    },200);
+                  }
+            });
+      }
+
 
 
 </script>

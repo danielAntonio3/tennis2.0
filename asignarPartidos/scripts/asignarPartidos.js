@@ -11,15 +11,16 @@ $(document).ready(function(){
           var js = JSON.parse(respuesta);
 
           var tamarreglo = js.length;
-
+          console.log(js);
 
           for (x = 0; x < tamarreglo; x++) {
 
             var nombrejugador=js[x].nombre+" "+js[x].apellidos;
 
             var opcion=$('<option></option>').attr('value',nombrejugador).text(nombrejugador);
+            var opcion2=$('<option></option>').attr('value',nombrejugador).text(nombrejugador);
             jugador1.append(opcion);
-            jugador2.append(opcion);
+            jugador2.append(opcion2);
 
 
           }
@@ -52,13 +53,13 @@ regresoDatos();
     e.preventDefault();
     var actual=$('#jugador1 option:selected').text();
     var datos=('jugador='+actual);
-    
+
     $.ajax({
       type:'get',
       url:'../asignarPartidos/php/cargarJugadores.php',
       data:datos,
       success: function(respuesta){
-      //$('#ij1').attr('src','../imagenes/federer.jpg');
+      $('#ij1').attr('src','../imagenes/federer.jpg');
 
       console.log(respuesta);
       }
@@ -76,7 +77,7 @@ regresoDatos();
       url:'../asignarPartidos/php/cargarJugadores.php',
       data:datos,
       success: function(respuesta){
-      //$('#ij1').attr('src','../imagenes/federer.jpg');
+      $('#ij2').attr('src','../imagenes/nadal.jpg');
 
       console.log(respuesta);
       }
