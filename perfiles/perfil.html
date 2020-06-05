@@ -9,6 +9,9 @@
   <script src="../perfiles/js/perfil.js"></script>
   <link rel="stylesheet" href="./css/perfil.css">
   <title>Perfil</title>
+
+
+
 </head>
 
 <body>
@@ -66,13 +69,13 @@
             Ver partidos
           </a>
         </li>
-        <li class="nav-item" id="proXPartido">
+        <li class="nav-item" id="agendarPartidos">
           <a class="lateral">
             <svg class="bi bi-calendar3" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z" />
               <path fill-rule="evenodd" d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
             </svg>
-            Próximos partidos
+            Agendar partidos
           </a>
         </li>
         <li class="nav-item">
@@ -92,6 +95,15 @@
             Registrar jugadores
           </a>
         </li>
+        <li class="nav-item" id="proXPartido">
+          <a class="lateral">
+            <svg class="bi bi-calendar3" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z" />
+              <path fill-rule="evenodd" d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+            </svg>
+            Proximos partidos
+          </a>
+        </li>
       </ul>
     </div>
     <div style="width: calc(100% - 251px);" id="recargar" style="padding: 0;">
@@ -101,7 +113,7 @@
 <script>
 
       function selecionado(e){
-            //alert("Editar torneo");
+
             var ids=('e='+e.id);
               console.log(ids);
               var contenedor = $('#recargar');
@@ -128,7 +140,7 @@
 
 
       function selecionado2(v){
-            alert("Registar Participantes");
+          //  alert("Registar Participantes");
             var ids=('v='+v.id);
               console.log(ids+'h');
               var contenedor = $('#recargar');
@@ -151,6 +163,58 @@
                   }
             });
       }
+
+      function selecionado3(b){
+
+            var ids=('b='+b.id);
+              console.log(ids+'h');
+              var contenedor = $('#recargar');
+            $.ajax({
+              url: "../asignarPartidos/asignarPartidos.html",
+              success: function(datos) {
+                  setTimeout(function() {
+                    contenedor.html(datos);
+                    $.ajax({
+                      type: "get",
+                      url: "../asignarPartidos/php/obtenerId.php",
+                      data: ids,
+                      success: function (respuesta) {
+                        if(respuesta != 0){
+                          console.log("listo id guardado");
+                        }
+                      }
+                    });
+                    },200);
+                  }
+            });
+      }
+
+      function selecionado4(c){
+
+            var ids=('c='+c.id);
+              console.log(ids+'');
+              var contenedor = $('#recargar');
+            $.ajax({
+              url: "../actualizarPartidos/actualizarPartidos.html",
+              success: function(datos) {
+                  setTimeout(function() {
+                    contenedor.html(datos);
+                    $.ajax({
+                      type: "get",
+                      url: "../actualizarPartidos/php/devolverId.php",
+                      data: ids,
+                      success: function (respuesta) {
+                        if(respuesta != 0){
+                          console.log("listo id guardado");
+                        }
+                      }
+                    });
+                    },200);
+                  }
+            });
+      }
+
+
 
 </script>
 

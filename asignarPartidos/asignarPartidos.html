@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="../0.-jquery/jquery-3.4.1.min.js"></script>
+  <script src="../asignarPartidos/scripts/asignarPartidos.js"></script>
+  <link rel="stylesheet" href="../asignarPartidos/css/estilos.css">
+  <title>Partidos</title>
+</head>
+
+<body>
+  <div class="content">
+    <div class="container" style="margin-bottom: 30px;">
+      <div class="row">
+        <div class="col-sm">
+          <center>
+            <img src="../imagenes/LogoTenis.png" alt="imagen" height="180" width="180" class="rounded" id="ij1">
+          </center>
+        </div>
+        <div class="col-sm align-self-center" style="text-align:center;">
+          <h2>&nbsp; VS</h2>
+        </div>
+        <div class=" col-sm">
+          <img src="../imagenes/LogoTenis.png" alt="imagen" height="180" width="180" class="rounded" id="ij2">
+        </div>
+      </div>
+      <div class="row" style="margin-top: 15px;">
+        <div class="col-sm">
+          <select name="" id="jugador1">
+            <option value="Federer">Roger Federer</option>
+          </select>
+        </div>
+        <div class="col-sm">
+        </div>
+        <div class="col-sm">
+          <select name="" id="jugador2">
+            <option value="Hola">Hola</option>
+            <option value="Nadal">Rafael Nadal</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <h4 style="text-align:center;">Detalles del encuentro</h4>
+    <span style="margin: 0 3%;">Fecha</span>
+    <center style="margin: 0 3%;">
+      <input type="date" name="fecha" id="fechaPartido" value="">
+      <select class="" name="" id="tpartido">
+        <option value="">Tipo</option>
+        <option value="Simple">Simple</option>
+        <option value="Doble">Doble</option>
+      </select>
+      <select class="" name="" id="cancha">
+        <option value="">Cancha</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+
+      </select>
+      <select class="" name="" id="monitor">
+        <option value="">Monitor</option>
+      </select>
+      <input type="submit" name="botonpartido" id="regPartido" value="Agendar">
+    </center>
+  </div>
+</body>
+
+</html>
