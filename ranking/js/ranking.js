@@ -22,7 +22,7 @@ $(document).ready(function() {
           var tarjeta = $('<div></div>').attr('class', 'card mb-3 size');
           var filaTarjeta = $('<div></div>').attr('class', 'row no-gutters');
           var colImagen = $('<div></div>').attr('class', 'col-4');
-          var imagenTarjeta = $('<img>').attr('src', imagen).attr('alt', '../../imagenes/' + nombre);
+          var imagenTarjeta = $('<img>').attr('src','../imagenes/'+ imagen).attr('width','230px').attr('height','230px');
           var colCont = $('<div></div>').attr('class', 'col-8');
           var divTitulo = $('<div></div>').attr('class', 'card-header topCard').attr('id', 'nombre')
           var nombrePlayer = $('<span></span>').text(nombre + " " + apellido);
