@@ -13,7 +13,7 @@ $(document).ready(function() {
   var registrarJugadores=$('#registrarParticipantes');
   var actuPartido=$('#actuPartido');
   var menuPrincipal=$('#menuPrincipal');
-
+  var agendarPartidos=$('#agendarPartidos');
 
 //funcion jala los datos de usuario
     function nombre(){
@@ -50,9 +50,11 @@ $(document).ready(function() {
             //eres Federacion
             tipo.text("Federacion");verTorneo.hide(); crearTorneo.hide();
             registrarUser.hide(); registrarJugadores.show(); actuPartido.hide();
+            agendarPartidos.show();
           }if(respuesta==4){
             tipo.text("Jugador"); verTorneo.hide(); crearTorneo.hide(); registrarJugadores.hide();
             registrarUser.hide(); actuPartido.hide();
+            agendarPartidos.hide();
           }
         }
       });
@@ -131,12 +133,49 @@ $(document).ready(function() {
       }
     });
   });
+  menuPrincipal.click(function(){
+    window.location.replace('../principal/principal.html'); 
+  });
 
-      menuPrincipal.click(function(){
-        window.location.replace('../principal/principal.html'); 
+
+     agendarPartidos=$('#agendarPartidos');
+
+    agendarPartidos.click(function() {
+      var espera = 200;
+      $.ajax({
+        url: "../asignarPartidos/torneosA.html",
+        beforeSend: function() {
+          contenedor.text('Cargando...');
+        },
+        success: function(datos) {
+          setTimeout(function() {
+            contenedor.html(datos);
+          }, espera);
+        }
       });
+    });
 
       
+
+
+     
+
+      actuPartido=$('#actuPartido');
+
+      actuPartido.click(function() {
+        var espera = 200;
+        $.ajax({
+          url: "../actualizarPartidos/mostrarPartidos.html",
+          beforeSend: function() {
+            contenedor.text('Cargando...');
+          },
+          success: function(datos) {
+            setTimeout(function() {
+              contenedor.html(datos);
+            }, espera);
+          }
+        });
+      });
 
 
 });

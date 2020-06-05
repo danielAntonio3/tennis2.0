@@ -2,7 +2,7 @@
 $usuario = 'root';
 
 #contrase de mysql joshua
-#$pass = "xamppadampa";
+// $pass = "xamppadampa";
 #contrase de mysql daniel
 $pass = "1234";
 
