@@ -1,6 +1,6 @@
 <?php
 $usuario="root";
-$pass="";
+$pass="1234";
 
 $mysqli = new mysqli('localhost', $usuario, $pass, 'lobotennis');
 $mysqli->set_charset("utf8");
@@ -18,15 +18,4 @@ while($row = $res->fetch_assoc()){
 }
 
 echo json_encode($salida);
-
-
-
-
-
-
-
-
-
-
-
  ?>

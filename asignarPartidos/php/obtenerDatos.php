@@ -6,7 +6,8 @@ $b=$_SESSION['b'];
 
 
 $usuario = 'root';
-$pass = "";
+$pass = "1234";
+
 $mysqli = new mysqli('localhost', $usuario, $pass, 'lobotennis');
 $mysqli->set_charset("utf8");
 $query="Select * from infojugador where torneo_id='$b'";

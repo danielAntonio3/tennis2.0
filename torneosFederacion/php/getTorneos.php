@@ -1,6 +1,6 @@
 <?php
 $usuario = 'root';
-$pass = "";
+$pass = "1234";
 
   $mbd = new PDO('mysql:host=localhost;dbname=lobotennis', $usuario, $pass);
   $mbd->exec("SET NAMES 'utf8';");

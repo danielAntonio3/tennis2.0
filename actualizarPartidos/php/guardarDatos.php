@@ -3,11 +3,12 @@
 session_start();
 $c=$_SESSION['c'];
 
-$usuario = 'root';
-$pass = "";
+//$usuario = 'root';
+//$pass = "";
 
 $usuario = 'root';
-$pass = "";
+$pass = "1234";
+
 $mysqli = new mysqli('localhost', $usuario, $pass, 'lobotennis');
 $mysqli->set_charset("utf8");
 $query="Select * from infotorneo where encuentro_id='$c'";
