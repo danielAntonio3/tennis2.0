@@ -18,6 +18,7 @@ $(document).ready(function() {
           var nombre = js[x].nombre;
           var pais = js[x].pais;
           var posicion = js[x].ranking_atp;
+          var puntos=js[x].puntos;
 
           var tarjeta = $('<div></div>').attr('class', 'card mb-3 size');
           var filaTarjeta = $('<div></div>').attr('class', 'row no-gutters');
@@ -29,6 +30,7 @@ $(document).ready(function() {
           var rankPlayer = $('<span></span>').attr('style', 'float:right').text("#" + posicion);
           var divBody = $('<div></div>').attr('class', 'card-body');
           var texto = $('<p></p>').attr('class', 'card-text').text("Nacionalidad: " + pais);
+          var texto2 = $('<p></p>').attr('class', 'card-text').text("Puntos: " + puntos);
 
           contenedor.append(tarjeta);
           tarjeta.append(filaTarjeta);
@@ -40,6 +42,7 @@ $(document).ready(function() {
           divTitulo.append(rankPlayer);
           colCont.append(divBody);
           divBody.append(texto);
+          divBody.append(texto2);
         }
       }
     });
