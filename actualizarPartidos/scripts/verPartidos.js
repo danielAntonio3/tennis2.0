@@ -30,9 +30,9 @@ $(document).ready(function () {
             var divContenido = $('<div></div>').attr('class', 'conte');
             var divTitulo = $('<span></span>').attr('id', 'nombreTorneo');
             var encabezadoT = $('<h4></h4>');
-            var tipoLetra = $('<b></b>').text(nombre);
+            var tipoLetra = $('<b></b>').text(nombre+" "+apellidos);
             var divDetalles = $('<div></div>').attr('class', 'details');
-            var fechas = $('<span></span>').attr('id', 'fechaTorneo').text(nombreoponente);
+            var fechas = $('<h4></h4>').attr('id', 'fechaTorneo').text(nombreoponente+" "+apellidosop);
             var saltoLinea = $('<br>');
 
 

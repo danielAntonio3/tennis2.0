@@ -45,7 +45,7 @@ $(document).ready(function() {
           }if(respuesta==2){
             //eres monitor
             tipo.text("Monitor"); actuPartido.show(); verTorneo.hide(); crearTorneo.hide();
-            registrarJugadores.hide();
+            registrarJugadores.hide(); agendarPartidos.hide();
           }if(respuesta==3){
             //eres Federacion
             tipo.text("Federacion");verTorneo.hide(); crearTorneo.hide();
@@ -134,7 +134,7 @@ $(document).ready(function() {
     });
   });
   menuPrincipal.click(function(){
-    window.location.replace('../principal/principal.html'); 
+    window.location.replace('../principal/principal.html');
   });
 
 
@@ -155,10 +155,10 @@ $(document).ready(function() {
       });
     });
 
-      
 
 
-     
+
+
 
       actuPartido=$('#actuPartido');
 
