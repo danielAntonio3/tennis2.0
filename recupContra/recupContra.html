@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/estilos.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <script src="../0.-jquery/jquery-3.4.1.min.js"></script>
   <script src="../recupContra/js/recupContra.js"></script>
@@ -11,27 +12,27 @@
 </head>
 
 <body>
-
-    <input type="email" id="email" placeholder="Escribe tu correo">
+  <div class="content">
+    <center style="margin-bottom: 15px;">
+      <img src="../imagenes/LogoTenis.png" width="150px" alt="LogoTenis">
+    </center>
+    <h3 style="text-align:center; margin-bottom: 6%;">Recuperar contraseña</h3>
+    <input type="email" id="email" class="input" placeholder="Escribe tu correo">
     <div>
-        <select id="pregunta" class="pregunta">
-          <option value="" disabled selected hidden>Seleciona una pregunta</option>
-          <option value="1">Nombre de tu mascota</option>
-          <option value="2">Nombre de tu abuelo paterno</option>
-          <option value="3">Nombre de tu primaria</option>
-          <option value="4">Pelicula favorita</option>
-          <option value="5">Lugar favorito</option>
-        </select>
-        <input type="text" id="respuesta" class="respuestas" placeholder="Respuesta">
-      </div>
-      <button id="Recuperar">Recuperar contraseña</button>
-
-      <input type="password" id="contrasena" placeholder="Escribe nueva contraseña">
-      <button id="restablecer">Restaurar contraseña</button>
-
-
-
-
+      <select id="pregunta" class="input">
+        <option value="" disabled selected hidden>Seleciona una pregunta</option>
+        <option value="1">Nombre de tu mascota</option>
+        <option value="2">Nombre de tu abuelo paterno</option>
+        <option value="3">Nombre de tu primaria</option>
+        <option value="4">Pelicula favorita</option>
+        <option value="5">Lugar favorito</option>
+      </select>
+      <input type="text" id="respuesta" class="input" placeholder="Respuesta">
+    </div>
+    <input type="submit" id="Recuperar" value="Recuperar contraseña" />
+    <input type="password" id="contrasena" placeholder="Escribe nueva contraseña">
+    <input type="submit" value="Restaurar contraseña" id="restablecer" />
+  </div>
 </body>
 
 </html>

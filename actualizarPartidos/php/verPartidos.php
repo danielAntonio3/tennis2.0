@@ -5,7 +5,9 @@ $usuario = 'root';
 #contrase de mysql joshua
 // $pass = "xamppadampa";
 // contrase de mysql daniel
-$pass = "";
+$pass = "1234";
+//contraseña de noe
+//$pass = "";
 
 
   $mbd = new PDO('mysql:host=localhost;dbname=lobotennis', $usuario, $pass);
