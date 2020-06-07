@@ -46,6 +46,7 @@ $(document).ready(function() {
             //eres monitor
             tipo.text("Monitor"); actuPartido.show(); verTorneo.hide(); crearTorneo.hide();
             registrarJugadores.hide(); registrarUser.hide();
+            agendarPartidos.hide();
           }if(respuesta==3){
             //eres Federacion
             tipo.text("Federacion");verTorneo.hide(); crearTorneo.hide();
