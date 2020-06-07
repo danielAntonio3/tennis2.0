@@ -9,9 +9,6 @@
   <script src="../perfiles/js/perfil.js"></script>
   <link rel="stylesheet" href="./css/perfil.css">
   <title>Perfil</title>
-
-
-
 </head>
 
 <body>
@@ -24,10 +21,10 @@
       </div>
       <ul class="nav flex-column">
         <li class="nav-item">
-          <a class="lateral"id="menuPrincipal" >
-            <svg class="bi bi-arrow-clockwise" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" d="M3.17 6.706a5 5 0 0 1 7.103-3.16.5.5 0 1 0 .454-.892A6 6 0 1 0 13.455 5.5a.5.5 0 0 0-.91.417 5 5 0 1 1-9.375.789z" />
-              <path fill-rule="evenodd" d="M8.147.146a.5.5 0 0 1 .707 0l2.5 2.5a.5.5 0 0 1 0 .708l-2.5 2.5a.5.5 0 1 1-.707-.708L10.293 3 8.147.854a.5.5 0 0 1 0-.708z" />
+          <a class="lateral" id="menuPrincipal">
+            <svg class="bi bi-house-door-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.5 10.995V14.5a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5V11c0-.25-.25-.5-.5-.5H7c-.25 0-.5.25-.5.495z" />
+              <path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
             </svg>
             Menu principal
           </a>
@@ -70,7 +67,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="lateral"id="actuPartido" >
+          <a class="lateral" id="actuPartido">
             <svg class="bi bi-arrow-clockwise" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" d="M3.17 6.706a5 5 0 0 1 7.103-3.16.5.5 0 1 0 .454-.892A6 6 0 1 0 13.455 5.5a.5.5 0 0 0-.91.417 5 5 0 1 1-9.375.789z" />
               <path fill-rule="evenodd" d="M8.147.146a.5.5 0 0 1 .707 0l2.5 2.5a.5.5 0 0 1 0 .708l-2.5 2.5a.5.5 0 1 1-.707-.708L10.293 3 8.147.854a.5.5 0 0 1 0-.708z" />
@@ -100,116 +97,109 @@
     <div style="width: calc(100% - 251px);" id="recargar" style="padding: 0;">
     </div>
   </div>
+  <script>
+  function selecionado(e) {
 
-<script>
-
-      function selecionado(e){
-
-            var ids=('e='+e.id);
-              console.log(ids);
-              var contenedor = $('#recargar');
-            $.ajax({
-              url: "../admiTorneos/ActualizarTornoe.html",
-              success: function(datos) {
-                  setTimeout(function() {
-                    contenedor.html(datos);
-                    $.ajax({
-                      type: "get",
-                      url: "../admiTorneos/php/guardarIdTorneo.php",
-                      data: ids,
-                      success: function (respuesta) {
-                        if(respuesta != 0){
-                          console.log("listo id guardado");
-                        }
-                      }
-                    });
-                    },200);
-                  }
-            });
+    var ids = ('e=' + e.id);
+    console.log(ids);
+    var contenedor = $('#recargar');
+    $.ajax({
+      url: "../admiTorneos/ActualizarTornoe.html",
+      success: function(datos) {
+        setTimeout(function() {
+          contenedor.html(datos);
+          $.ajax({
+            type: "get",
+            url: "../admiTorneos/php/guardarIdTorneo.php",
+            data: ids,
+            success: function(respuesta) {
+              if (respuesta != 0) {
+                console.log("listo id guardado");
+              }
+            }
+          });
+        }, 200);
       }
+    });
+  }
 
 
 
-      function selecionado2(v){
-          //  alert("Registar Participantes");
-            var ids=('v='+v.id);
-              console.log(ids+'h');
-              var contenedor = $('#recargar');
-            $.ajax({
-              url: "../admiParticipantes/registrarParticipantes.html",
-              success: function(datos) {
-                  setTimeout(function() {
-                    contenedor.html(datos);
-                    $.ajax({
-                      type: "get",
-                      url: "../admiParticipantes/php/saveIdTorneo.php",
-                      data: ids,
-                      success: function (respuesta) {
-                        if(respuesta != 0){
-                          console.log("listo id guardado");
-                        }
-                      }
-                    });
-                    },200);
-                  }
-            });
+  function selecionado2(v) {
+    //  alert("Registar Participantes");
+    var ids = ('v=' + v.id);
+    console.log(ids + 'h');
+    var contenedor = $('#recargar');
+    $.ajax({
+      url: "../admiParticipantes/registrarParticipantes.html",
+      success: function(datos) {
+        setTimeout(function() {
+          contenedor.html(datos);
+          $.ajax({
+            type: "get",
+            url: "../admiParticipantes/php/saveIdTorneo.php",
+            data: ids,
+            success: function(respuesta) {
+              if (respuesta != 0) {
+                console.log("listo id guardado");
+              }
+            }
+          });
+        }, 200);
       }
+    });
+  }
 
-      function selecionado3(b){
+  function selecionado3(b) {
 
-            var ids=('b='+b.id);
-              console.log(ids+'h');
-              var contenedor = $('#recargar');
-            $.ajax({
-              url: "../asignarPartidos/asignarPartidos.html",
-              success: function(datos) {
-                  setTimeout(function() {
-                    contenedor.html(datos);
-                    $.ajax({
-                      type: "get",
-                      url: "../asignarPartidos/php/obtenerId.php",
-                      data: ids,
-                      success: function (respuesta) {
-                        if(respuesta != 0){
-                          console.log("listo id guardado");
-                        }
-                      }
-                    });
-                    },200);
-                  }
-            });
+    var ids = ('b=' + b.id);
+    console.log(ids + 'h');
+    var contenedor = $('#recargar');
+    $.ajax({
+      url: "../asignarPartidos/asignarPartidos.html",
+      success: function(datos) {
+        setTimeout(function() {
+          contenedor.html(datos);
+          $.ajax({
+            type: "get",
+            url: "../asignarPartidos/php/obtenerId.php",
+            data: ids,
+            success: function(respuesta) {
+              if (respuesta != 0) {
+                console.log("listo id guardado");
+              }
+            }
+          });
+        }, 200);
       }
+    });
+  }
 
-      function selecionado4(c){
+  function selecionado4(c) {
 
-            var ids=('c='+c.id);
-              console.log(ids+'');
-              var contenedor = $('#recargar');
-            $.ajax({
-              url: "../actualizarPartidos/actualizarPartidos.html",
-              success: function(datos) {
-                  setTimeout(function() {
-                    contenedor.html(datos);
-                    $.ajax({
-                      type: "get",
-                      url: "../actualizarPartidos/php/devolverId.php",
-                      data: ids,
-                      success: function (respuesta) {
-                        if(respuesta != 0){
-                          console.log("listo id guardado");
-                        }
-                      }
-                    });
-                    },200);
-                  }
-            });
+    var ids = ('c=' + c.id);
+    console.log(ids + '');
+    var contenedor = $('#recargar');
+    $.ajax({
+      url: "../actualizarPartidos/actualizarPartidos.html",
+      success: function(datos) {
+        setTimeout(function() {
+          contenedor.html(datos);
+          $.ajax({
+            type: "get",
+            url: "../actualizarPartidos/php/devolverId.php",
+            data: ids,
+            success: function(respuesta) {
+              if (respuesta != 0) {
+                console.log("listo id guardado");
+              }
+            }
+          });
+        }, 200);
       }
-
-
-
-</script>
-
-
+    });
+  }
+  </script>
 </body>
 
 </html>
