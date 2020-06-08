@@ -16,13 +16,13 @@ $(document).ready(function () {
           var tamarreglo = js.length;
           //console.log(tamarreglo);
 
-
-            var encuentro_id= js[0].encuentro_id;
-            var jugador_id=js[0].jugador_id;
-            var nombre=js[0].nombre;
-            var apellidos=js[0].apellidos;
-            var nombreoponente=js[1].nombre;
-            var apellidosop=js[1].apellidos;
+            for (x=0; x<tamarreglo; x++){
+            var encuentro_id= js[x].encuentro_id;
+            var jugador_id=js[x].jugador_id;
+            var nombre=js[x].nombre;
+            var apellidos=js[x+1].apellidos;
+            var nombreoponente=js[x+1].nombre;
+            var apellidosop=js[x+1].apellidos;
 
 
             var div = $('<div></div>').attr('id', encuentro_id).attr('class', 'card').attr('onclick', 'selecionado4(this)');
@@ -46,7 +46,9 @@ $(document).ready(function () {
             divDetalles.append(fechas);
             divDetalles.append(saltoLinea);
 
+              x++;
 
+          }
 
         }
       });
