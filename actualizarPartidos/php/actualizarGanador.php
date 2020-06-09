@@ -1,7 +1,7 @@
 <?php
 
 $usuario = 'root';
-$pass = "";
+$pass = "1234";
 $mysqli = new mysqli('localhost', $usuario, $pass, 'lobotennis');
 $mysqli->set_charset("utf8");
 $encuentro_id=$_GET['idencuentro'];
