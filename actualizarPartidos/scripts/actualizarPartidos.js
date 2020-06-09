@@ -6,7 +6,13 @@ $(document).ready(function () {
   var numset2=parseInt($('#numset2').text());
   var inicio=0;
 	var timeout=0;
-
+  var tipoencuentro="";
+  var numset=1;
+  var idencuentro=0;
+  var puntosj1=0;
+  var puntosj2=0;
+  var cuentaset1=0;
+  var cuentaset2=0;
   function regresoDatos(){
 
     $.ajax({
@@ -14,8 +20,8 @@ $(document).ready(function () {
         success: function (respuesta) {
           var js = JSON.parse(respuesta);
 
-
-
+          idencuentro=js[0].encuentro_id;
+          tipoencuentro=js[0].tipo_encuentro;
 
             var nombrejugador=js[0].nombre+" "+js[0].apellidos;
             var jugadoroponente=js[1].nombre+" "+js[1].apellidos;
@@ -92,6 +98,7 @@ $('#Punto1').click(function(event){
     punto1=0;
     punto2=0;
     numset1+= 1;
+    puntosj1++;
     $('#numset1').text(numset1);
   }
   else if (punto1==40 && punto2==40) {
@@ -108,6 +115,89 @@ $('#Punto1').click(function(event){
   $('#puntaje1').text(punto1);
   $('#puntaje2').text(punto2);
 
+  console.log(tipoencuentro);
+
+  if (tipoencuentro=="Desempate") {
+
+    if (((puntosj1>puntosj2)) && (puntosj1>=6)){
+      datos=('numset='+numset+"&tiempo_juego="+$('#crono').text()+"&encuentro_id="+idencuentro+
+      "&ganador="+$('#j1').text()+"&puntos_ganador="+puntosj1+"&puntos_perdedor="+puntosj2);
+
+      $.ajax({
+        type:'get',
+        url: "../actualizarPartidos/php/actualizarSet.php",
+        data: datos,
+        success: function (respuesta) {
+            numset++;
+            cuentaset1++;
+            $('#numset1').text('0');
+            $('#numset2').text('0');
+            if (cuentaset1==2) {
+
+            var datosjuego=('idencuentro='+idencuentro+'&ganador='+$('#j1').text());
+
+                $.ajax({
+                  type:'get',
+                  url:"../actualizarPartidos/php/actualizarGanador.php",
+                  data:datosjuego,
+                  success:function(res){
+
+                  }
+
+
+
+                });
+
+            }
+
+      }
+
+      });
+
+    }
+  }
+  else if (tipoencuentro=="Ventajas") {
+    if (((puntosj1-puntosj2)>=2) && (puntosj1>=6)) {
+
+      datos=('numset='+numset+"&tiempo_juego="+$('#crono').text()+"&encuentro_id="+idencuentro+
+      "&ganador="+$('#j1').text()+"&puntos_ganador="+puntosj1+"&puntos_perdedor="+puntosj2);
+
+      $.ajax({
+        type:'get',
+        url: "../actualizarPartidos/php/actualizarSet.php",
+        data: datos,
+        success: function (respuesta) {
+            numset++;
+            cuentaset1++;
+            $('#numset1').text('0');
+            $('#numset2').text('0');
+            if (cuentaset1==2) {
+
+            var datosjuego=('idencuentro='+idencuentro+'&ganador='+$('#j1').text());
+
+                $.ajax({
+                  type:'get',
+                  url:"../actualizarPartidos/php/actualizarGanador.php",
+                  data:datosjuego,
+                  success:function(res){
+
+                  }
+
+
+
+                });
+
+            }
+
+      }
+
+      });
+
+    }
+
+  }
+
+
 
 
 
@@ -121,6 +211,8 @@ $('#Punto2').click(function(event){
     punto1=0;
     punto2=0;
     numset2+= 1;
+    puntosj2++;
+
     $('#numset2').text(numset2);
   }
   else if (punto1==40 && punto2==40) {
@@ -136,6 +228,97 @@ $('#Punto2').click(function(event){
   }
 $('#puntaje1').text(punto1);
 $('#puntaje2').text(punto2);
+
+        if (tipoencuentro=="Desempate") {
+          if (((puntosj2>puntosj1)) && (puntosj2>=6)){
+            datos=('numset='+numset+"&tiempo_juego="+$('#crono').text()+"&encuentro_id="+idencuentro+
+            "&ganador="+$('#j2').text()+"&puntos_ganador="+puntosj2+"&puntos_perdedor="+puntosj1);
+
+            $.ajax({
+              type:'get',
+              url: "../actualizarPartidos/php/actualizarSet.php",
+              data: datos,
+              success: function (respuesta) {
+                numset++;
+
+                cuentaset2++;
+                $('#numset1').text('0');
+                $('#numset2').text('0');
+                if (cuentaset2==2) {
+
+                var datosjuego=('idencuentro='+idencuentro+'&ganador='+$('#j2').text());
+
+                    $.ajax({
+                      type:'get',
+                      url:"../actualizarPartidos/php/actualizarGanador.php",
+                      data:datosjuego,
+                      success:function(res){
+
+                      }
+
+
+
+                    });
+
+                }
+
+            }
+
+            });
+
+          }
+
+
+
+
+
+        }
+        else if (tipoencuentro=="Ventajas") {
+
+          if (((puntosj2-puntosj1)>=2) && (puntosj2>=6)) {
+
+            datos=('numset='+numset+"&tiempo_juego="+$('#crono').text()+"&encuentro_id="+idencuentro+
+            "&ganador="+$('#j2').text()+"&puntos_ganador="+puntosj2+"&puntos_perdedor="+puntosj1);
+
+            $.ajax({
+              type:'get',
+              url: "../actualizarPartidos/php/actualizarSet.php",
+              data: datos,
+              success: function (respuesta) {
+                numset++;
+
+                cuentaset2++;
+                $('#numset1').text('0');
+                $('#numset2').text('0');
+                if (cuentaset2==2) {
+
+                var datosjuego=('idencuentro='+idencuentro+'&ganador='+$('#j2').text());
+
+                    $.ajax({
+                      type:'get',
+                      url:"../actualizarPartidos/php/actualizarGanador.php",
+                      data:datosjuego,
+                      success:function(res){
+
+                      }
+
+
+
+                    });
+
+                }
+
+
+            }
+
+            });
+
+          }
+
+
+
+        }
+
 
 
       });
