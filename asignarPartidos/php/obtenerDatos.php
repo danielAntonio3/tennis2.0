@@ -19,7 +19,8 @@ while($row = $res->fetch_assoc()){
    "nombre"=> $row["nombre"],
      "apellidos"=> $row["apellidos"],
      "id_user"=> $row["id_user"],
-     "torneo_id"=> $row["torneo_id"]
+     "torneo_id"=> $row["torneo_id"],
+     "foto"=> $row["foto"]
   );
 }
 
