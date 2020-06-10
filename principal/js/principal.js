@@ -63,11 +63,6 @@ $(document).ready(function() {
   });
 
 
-
-});
-
-$(document).ready(function() {
-
   var selector = $('#selector');
 
 
@@ -75,7 +70,7 @@ $(document).ready(function() {
     $.ajax({
       type: "get",
       //cgecar la ruta
-      url: "../../admiTorneos/php/mostrarTorneos.php",
+      url: "../admiTorneos/php/mostrarTorneos.php",
       success: function(respuesta) {
         var js = JSON.parse(respuesta);
         console.log(js);
@@ -118,5 +113,24 @@ $(document).ready(function() {
   }
 
   logic();
+
+
+  //para mostar todos los torneos que hay registrados
+    var contenedor=$('#recargar');
+
+      function cargarTorneos(){
+        //var espera = 200;
+        $.ajax({
+          url: "../principal/mostarTorneos.html",
+          success: function(datos) {
+            setTimeout(function() {
+              contenedor.html(datos);
+            },200);
+          }
+        });
+
+      }
+
+      cargarTorneos();
 
 });

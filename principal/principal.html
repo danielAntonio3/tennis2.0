@@ -75,6 +75,13 @@
         <span class="sr-only ">Next</span>
       </a>
     </div>
+
+    <div style="width: calc(100% - 251px);" id="recargar" style="padding: 0;">
+      <!--Mostrar torneo -->
+    </div>
+
+
+
     <!-- <section id="selector" class="grid-container" style="padding:auto;">
 </section> -->
     <center></center>
@@ -149,9 +156,9 @@
   </footer>
 </div>-->
     <script>
-    document.addEventListener("DOMContentLoaded", function() {
+    /*document.addEventListener("DOMContentLoaded", function() {
       logic();
-    });
+    });*/
 
     function myFunction() {
       var x = document.getElementById("myDIV");
@@ -161,6 +168,34 @@
         x.style.display = "none";
       }
     }
+
+function selecionado(e) {
+  var ids =e.id;
+  console.log(ids);
+  //return 0;
+  var contenedor = $('#recargar');
+  var datos=('idTorneo='+ids);
+  $.ajax({
+    type: "get",
+    url: "../principal/php/idPartido.php",
+    data: datos,
+    success: function(datos) {
+      }
+    })
+    $.ajax({
+          url: "../principal/mostrarPartidos.html",
+          beforeSend: function() {
+            contenedor.text('Cargando................');
+          },
+          success: function(datos) {
+            setTimeout(function() {
+              contenedor.html(datos);
+            },200);
+          }
+        });
+  };
+
+
     </script>
 </body>
 
