@@ -14,6 +14,7 @@ $(document).ready(function() {
   var actuPartido=$('#actuPartido');
   var menuPrincipal=$('#menuPrincipal');
   var agendarPartidos=$('#agendarPartidos');
+  var histoPartido=$('#histoPartido');
 
 //funcion jala los datos de usuario
     function nombre(){
@@ -156,11 +157,6 @@ $(document).ready(function() {
       });
     });
 
-
-
-
-
-
       actuPartido=$('#actuPartido');
 
       actuPartido.click(function() {
@@ -177,6 +173,27 @@ $(document).ready(function() {
           }
         });
       });
+
+      
+      histoPartido.click(function (e) { 
+        e.preventDefault();
+        alert("hola");
+        var espera = 200;
+        $.ajax({
+          url: "../historial/historial.html",
+          beforeSend: function() {
+            contenedor.text('Cargando...');
+          },
+          success: function(datos) {
+            setTimeout(function() {
+              contenedor.html(datos);
+            }, espera);
+          }
+        });
+
+        
+      });
+
 
 
 });
