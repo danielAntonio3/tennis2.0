@@ -15,6 +15,7 @@ $(document).ready(function() {
   var menuPrincipal=$('#menuPrincipal');
   var agendarPartidos=$('#agendarPartidos');
   var histoPartido=$('#histoPartido');
+  var ProxPartido=$('#ProxPartido');
 
 //funcion jala los datos de usuario
     function nombre(){
@@ -42,21 +43,21 @@ $(document).ready(function() {
             //eres administrador
             tipo.text("Administrador");
             actuPartido.hide(); verTorneo.show(); crearTorneo.show(); registrarUser.show();
-            registrarJugadores.hide();
+            registrarJugadores.hide();ProxPartido.hide();
           }if(respuesta==2){
             //eres monitor
             tipo.text("Monitor"); actuPartido.show(); verTorneo.hide(); crearTorneo.hide();
             registrarJugadores.hide(); registrarUser.hide();
-            agendarPartidos.hide();
+            agendarPartidos.hide();ProxPartido.hide();
           }if(respuesta==3){
             //eres Federacion
             tipo.text("Federacion");verTorneo.hide(); crearTorneo.hide();
             registrarUser.hide(); registrarJugadores.show(); actuPartido.hide();
-            agendarPartidos.show();
+            agendarPartidos.show();ProxPartido.hide();
           }if(respuesta==4){
             tipo.text("Jugador"); verTorneo.hide(); crearTorneo.hide(); registrarJugadores.hide();
             registrarUser.hide(); actuPartido.hide();
-            agendarPartidos.hide();
+            agendarPartidos.hide();ProxPartido.show();
           }
         }
       });
@@ -177,7 +178,6 @@ $(document).ready(function() {
       
       histoPartido.click(function (e) { 
         e.preventDefault();
-        alert("hola");
         var espera = 200;
         $.ajax({
           url: "../historial/historial.html",
