@@ -75,75 +75,13 @@
         <span class="sr-only ">Next</span>
       </a>
     </div>
-
-    <div style="width: calc(100% - 251px);" id="recargar" style="padding: 0;">
-      <!--Mostrar torneo -->
-    </div>
-
-
-
-    <!-- <section id="selector" class="grid-container" style="padding:auto;">
+    <center>
+      <div style="width: calc(90%);" id="recargar" style="padding: 0;">
+        <!--Mostrar torneo -->
+      </div>
+      <!-- <section id="selector" class="grid-container" style="padding:auto;">
 </section> -->
-    <center></center>
-    <div id="myDIV">
-      <section id="bracket">
-        <div class="container2">
-          <div class="split split-one">
-            <div class="round round-one current">
-              <div class="round-details">Ronda 1<br /><span class="date">Junio 16</span></div>
-              <ul class="matchup">
-                <li class="team team-top">Rafael Nadal<span class="score">76</span></li>
-                <li class="team team-bottom">Roger Federer<span class="score">82</span></li>
-              </ul>
-              <ul class="matchup">
-                <li class="team team-top">Andy Murray<span class="score">64</span></li>
-                <li class="team team-bottom">Clemson<span class="score">56</span></li>
-              </ul>
-              <ul class="matchup">
-                <li class="team team-top">Juan del Potro<span class="score">68</span></li>
-                <li class="team team-bottom">Carlos Moyá<span class="score">54</span></li>
-              </ul>
-              <ul class="matchup">
-                <li class="team team-top">Guillermo Vilas<span class="score">74</span></li>
-                <li class="team team-bottom">Juan Ferrero<span class="score">92</span></li>
-              </ul>
-            </div> <!-- END ROUND ONE -->
-            <div class="round round-two">
-              <div class="round-details">Ronda 2<br /><span class="date">Junio 18</span></div>
-              <ul class="matchup">
-                <li class="team team-top">Andy Murray<span class="score">64</span></li>
-                <li class="team team-bottom">Roger Federer<span class="score">82</span></li>
-              </ul>
-              <ul class="matchup">
-                <li class="team team-bottom">Juan Ferrero<span class="score">92</span></li>
-                <li class="team team-top">Juan del Potro<span class="score">68</span></li>
-              </ul>
-            </div> <!-- END ROUND TWO -->
-            <div class="round round-three">
-              <div class="round-details">Ronda 3<br /><span class="date">Junio 22</span></div>
-              <ul class="matchup">
-                <li class="team team-bottom">Roger Federer<span class="score">82</span></li>
-                <li class="team team-bottom">Juan Ferrero<span class="score">92</span></li>
-              </ul>
-            </div> <!-- END ROUND THREE -->
-          </div>
-          <div class="champion">
-            <div class="round">
-              <span><svg class="bi bi-trophy" width="50px" height="50px" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M3 1h10c-.495 3.467-.5 10-5 10S3.495 4.467 3 1zm0 15a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1H3zm2-1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1H5z" />
-                  <path fill-rule="evenodd" d="M12.5 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm-6-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0z" />
-                  <path d="M7 10h2v4H7v-4z" />
-                  <path d="M10 11c0 .552-.895 1-2 1s-2-.448-2-1 .895-1 2-1 2 .448 2 1z" />
-                </svg></span>
-              <div class="round-details">Campeón <br /></div>
-              <ul class="">
-                <li class="team">Juan Ferrero<span class="score">92</span></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+    </center>
     <!-- <div>
   <footer id="footer">
     <nav id="footernav">
@@ -160,42 +98,30 @@
       logic();
     });*/
 
-    function myFunction() {
-      var x = document.getElementById("myDIV");
-      if (x.style.display === "none") {
-        x.style.display = "block";
-      } else {
-        x.style.display = "none";
-      }
-    }
-
-function selecionado(e) {
-  var ids =e.id;
-  console.log(ids);
-  //return 0;
-  var contenedor = $('#recargar');
-  var datos=('idTorneo='+ids);
-  $.ajax({
-    type: "get",
-    url: "../principal/php/idPartido.php",
-    data: datos,
-    success: function(datos) {
-      }
-    })
-    $.ajax({
-          url: "../principal/mostrarPartidos.html",
-          beforeSend: function() {
-            contenedor.text('Cargando................');
-          },
-          success: function(datos) {
-            setTimeout(function() {
-              contenedor.html(datos);
-            },200);
-          }
-        });
-  };
-
-
+    function selecionado(e) {
+      var ids = e.id;
+      console.log(ids);
+      //return 0;
+      var contenedor = $('#recargar');
+      var datos = ('idTorneo=' + ids);
+      $.ajax({
+        type: "get",
+        url: "../principal/php/idPartido.php",
+        data: datos,
+        success: function(datos) {}
+      })
+      $.ajax({
+        url: "../principal/mostrarPartidos.html",
+        beforeSend: function() {
+          contenedor.text('Cargando................');
+        },
+        success: function(datos) {
+          setTimeout(function() {
+            contenedor.html(datos);
+          }, 200);
+        }
+      });
+    };
     </script>
 </body>
 
