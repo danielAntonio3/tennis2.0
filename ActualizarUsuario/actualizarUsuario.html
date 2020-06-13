@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../admiTorneos/css/estilos.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="../0.-jquery/jquery-3.4.1.min.js"></script>
+  <script src="../ActualizarUsuario/js/actualizar.js"></script>
+  <title>Actualizar Usuarios</title>
+  <style>
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #E8E8E8;
+    padding: 10px;
+    border-radius: 5px;
+    min-height: 440px;
+    max-height: 440px;
+    overflow-y: auto;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 300px;
+    height: 200px;
+    background: #F0F0F0;
+    padding-left: 25px;
+    padding-top: -2px;
+    /*color: balck;*/
+    margin: 15px;
+    cursor: pointer;
+  }
+
+  .label {
+    background-color: #2185D5;
+    min-width: 35px;
+    height: 199px;
+    left: 0;
+    position: absolute;
+  }
+
+  .conte {
+    padding: 25px 30px;
+    flex: 1 1 auto;
+
+  }
+
+  .details {
+    padding-top: 20px;
+    font-size: 15px;
+  }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-light bg-light " style="border-bottom: 2px solid #c9c9c9">
+    <a class="navbar-brand" href="#">
+      <img src="../imagenes/LogoTenis.png" width="50px" alt="LogoTenis">
+      Master Tenis
+    </a>
+  </nav>
+  <div class="contentTorneos">
+    <h2 style="text-align:center;">Torneos</h2>
+    <br>
+    <section id="selector" class="grid-container" style="padding:auto;">
+    </section>
+  </div>
+</body>
+ 
