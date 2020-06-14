@@ -7,7 +7,7 @@ $(document).ready(function() {
       $.ajax({
         type: "get",
         //cgecar la ruta
-        url: "../admiTorneos/php/mostrarTorneos.php",
+        url: "../ActualizarUsuario/php/actualizarUsuario.php",
         success: function(respuesta) {
           var js = JSON.parse(respuesta);
           console.log(js);
@@ -15,35 +15,112 @@ $(document).ready(function() {
           //console.log(tamarreglo);
   
           for (x = 0; x < tamarreglo; x++) {
-            var id_torneo = js[x].id_torneo;
-            var nombre_torneo = js[x].nombre_torneo;
-            var fecha_inicio = js[x].fecha_inicio;
-            var fecha_fin = js[x].fecha_fin;
-            var modalidad_torneo = js[x].modalidad_torneo;
-            var sede = js[x].sede;
+            var id_user = js[x].id_user;
+            var nombre = js[x].nombre;
+            var apellidos = js[x].apellidos;
+            var correo = js[x].correo;
+            var tipo_user= js[x].tipo_user;
   
-  
-            var div = $('<div></div>').attr('id', id_torneo).attr('class', 'card').attr('onclick', 'selecionado(this)');
-            var divColor = $('<div></div>').attr('class', 'label');
-            var divContenido = $('<div></div>').attr('class', 'conte');
-            var divTitulo = $('<span></span>').attr('id', 'nombreTorneo');
-            var encabezadoT = $('<h4></h4>');
-            var tipoLetra = $('<b></b>').text(nombre_torneo);
-            var divDetalles = $('<div></div>').attr('class', 'details');
-            var fechas = $('<span></span>').attr('id', 'fechaTorneo').text(fecha_inicio + " - " + fecha_fin);
-            var saltoLinea = $('<br>');
-            var sedes = $('<span></span>').attr('id', 'sede').text(sede);
-  
-            selector.append(div);
-            div.append(divColor);
-            div.append(divContenido);
-            divContenido.append(divTitulo);
-            divTitulo.append(encabezadoT);
-            encabezadoT.append(tipoLetra);
-            divContenido.append(divDetalles);
-            divDetalles.append(fechas);
-            divDetalles.append(saltoLinea);
-            divDetalles.append(sedes);
+            
+            if(tipo_user == 1)
+            {
+              var div = $('<div></div>').attr('id', id_user).attr('class', 'card').attr('onclick', 'selecionado5(this)');
+              var divColor = $('<div></div>').attr('class', 'label');
+              var divContenido = $('<div></div>').attr('class', 'conte');
+              var divTitulo = $('<span></span>').attr('id', 'nombreTorneo');
+              var encabezadoT = $('<h4></h4>');
+              var tipoLetra = $('<b></b>').text("Administrador");
+              var divDetalles = $('<div></div>').attr('class', 'details');
+              var fechas = $('<span></span>').attr('id', 'fechaTorneo').text(nombre + " " +apellidos);
+              var saltoLinea = $('<br><br>');
+              var sedes = $('<span></span>').attr('id', 'sede').text(correo);
+    
+              selector.append(div);
+              div.append(divColor);
+              div.append(divContenido);
+              divContenido.append(divTitulo);
+              divTitulo.append(encabezadoT);
+              encabezadoT.append(tipoLetra);
+              divContenido.append(divDetalles);
+              divDetalles.append(fechas);
+              divDetalles.append(saltoLinea);
+              divDetalles.append(sedes);
+            }
+
+            if(tipo_user == 2)
+            {
+              var div = $('<div></div>').attr('id', id_user).attr('class', 'card').attr('onclick', 'selecionado5(this)');
+              var divColor = $('<div></div>').attr('class', 'label');
+              var divContenido = $('<div></div>').attr('class', 'conte');
+              var divTitulo = $('<span></span>').attr('id', 'nombreTorneo');
+              var encabezadoT = $('<h4></h4>');
+              var tipoLetra = $('<b></b>').text("Monitor");
+              var divDetalles = $('<div></div>').attr('class', 'details');
+              var fechas = $('<span></span>').attr('id', 'fechaTorneo').text(nombre + " " +apellidos);
+              var saltoLinea = $('<br><br>');
+              var sedes = $('<span></span>').attr('id', 'sede').text(correo);
+    
+              selector.append(div);
+              div.append(divColor);
+              div.append(divContenido);
+              divContenido.append(divTitulo);
+              divTitulo.append(encabezadoT);
+              encabezadoT.append(tipoLetra);
+              divContenido.append(divDetalles);
+              divDetalles.append(fechas);
+              divDetalles.append(saltoLinea);
+              divDetalles.append(sedes);
+              }
+              if(tipo_user == 3)
+            {
+              var div = $('<div></div>').attr('id', id_user).attr('class', 'card').attr('onclick', 'selecionado5(this)');
+              var divColor = $('<div></div>').attr('class', 'label');
+              var divContenido = $('<div></div>').attr('class', 'conte');
+              var divTitulo = $('<span></span>').attr('id', 'nombreTorneo');
+              var encabezadoT = $('<h4></h4>');
+              var tipoLetra = $('<b></b>').text("Federacion");
+              var divDetalles = $('<div></div>').attr('class', 'details');
+              var fechas = $('<span></span>').attr('id', 'fechaTorneo').text(nombre + " " +apellidos);
+              var saltoLinea = $('<br><br>');
+              var sedes = $('<span></span>').attr('id', 'sede').text(correo);
+    
+              selector.append(div);
+              div.append(divColor);
+              div.append(divContenido);
+              divContenido.append(divTitulo);
+              divTitulo.append(encabezadoT);
+              encabezadoT.append(tipoLetra);
+              divContenido.append(divDetalles);
+              divDetalles.append(fechas);
+              divDetalles.append(saltoLinea);
+              divDetalles.append(sedes);
+              }
+
+              if(tipo_user == 4)
+            {
+              var div = $('<div></div>').attr('id', id_user).attr('class', 'card').attr('onclick', 'selecionado5(this)');
+              var divColor = $('<div></div>').attr('class', 'label');
+              var divContenido = $('<div></div>').attr('class', 'conte');
+              var divTitulo = $('<span></span>').attr('id', 'nombreTorneo');
+              var encabezadoT = $('<h4></h4>');
+              var tipoLetra = $('<b></b>').text("Jugador");
+              var divDetalles = $('<div></div>').attr('class', 'details');
+              var fechas = $('<span></span>').attr('id', 'fechaTorneo').text(nombre + " " +apellidos);
+              var saltoLinea = $('<br><br>');
+              var sedes = $('<span></span>').attr('id', 'sede').text(correo);
+    
+              selector.append(div);
+              div.append(divColor);
+              div.append(divContenido);
+              divContenido.append(divTitulo);
+              divTitulo.append(encabezadoT);
+              encabezadoT.append(tipoLetra);
+              divContenido.append(divDetalles);
+              divDetalles.append(fechas);
+              divDetalles.append(saltoLinea);
+              divDetalles.append(sedes);
+              }
+
           }
         }
       });

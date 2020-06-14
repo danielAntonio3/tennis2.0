@@ -15,7 +15,8 @@ $(document).ready(function() {
   var menuPrincipal=$('#menuPrincipal');
   var agendarPartidos=$('#agendarPartidos');
   var histoPartido=$('#histoPartido');
-  var ProxPartido=$('#ProxPartido');
+  var ActuUser=$('#ActuUser');
+  var cerrar=$('#cerrar');
 
 //funcion jala los datos de usuario
     function nombre(){
@@ -43,21 +44,21 @@ $(document).ready(function() {
             //eres administrador
             tipo.text("Administrador");
             actuPartido.hide(); verTorneo.show(); crearTorneo.show(); registrarUser.show();
-            registrarJugadores.hide();ProxPartido.hide();
+            registrarJugadores.hide();ActuUser.show(); agendarPartidos.hide();histoPartido.hide();
           }if(respuesta==2){
             //eres monitor
             tipo.text("Monitor"); actuPartido.show(); verTorneo.hide(); crearTorneo.hide();
             registrarJugadores.hide(); registrarUser.hide();
-            agendarPartidos.hide();ProxPartido.hide();
+            agendarPartidos.hide();ActuUser.hide();histoPartido.hide();
           }if(respuesta==3){
             //eres Federacion
             tipo.text("Federacion");verTorneo.hide(); crearTorneo.hide();
             registrarUser.hide(); registrarJugadores.show(); actuPartido.hide();
-            agendarPartidos.show();ProxPartido.hide();
+            agendarPartidos.show();ActuUser.hide();histoPartido.hide();
           }if(respuesta==4){
             tipo.text("Jugador"); verTorneo.hide(); crearTorneo.hide(); registrarJugadores.hide();
             registrarUser.hide(); actuPartido.hide();
-            agendarPartidos.hide();ProxPartido.show();
+            agendarPartidos.hide(); ActuUser.hide();histoPartido.show();
           }
         }
       });
@@ -190,9 +191,48 @@ $(document).ready(function() {
             }, espera);
           }
         });
-
-        
       });
+
+
+      ActuUser.click(function (e) { 
+        e.preventDefault();
+        var espera = 200;
+        $.ajax({
+          url: "../ActualizarUsuario/actualizarUsuario.html",
+          beforeSend: function() {
+            contenedor.text('Cargando...');
+          },
+          success: function(datos) {
+            setTimeout(function() {
+              contenedor.html(datos);
+            }, espera);
+          }
+        });
+      });
+
+      cerrar.click(function (e) { 
+        e.preventDefault();
+        $.ajax({
+          url: "../principal/php/cerrarSesion.php",
+          success: function(respuesta) {
+            if (respuesta == 1) {
+              $('#cerrarSesion').hide();
+              $('#inicioSesion').show();
+              $('#perfil').hide();
+              window.location.replace('../principal/principal.html');
+            } else {
+              $('#cerrarSesion').hide();
+              $('#inicioSesion').show();
+              $('#perfil').hide();
+            }
+    
+          }
+        });
+
+
+
+      });
+
 
 
 
