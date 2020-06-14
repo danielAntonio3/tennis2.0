@@ -6,124 +6,173 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <script src="../0.-jquery/jquery-3.4.1.min.js"></script>
-    <style>
-        .contenedor{
-            width: 30%;
-            display: flex;
-            flex-direction: column;
-            margin: 0 auto;
-            padding: .5%;
-            padding-top: 30px;
-            padding-bottom: 20px;
-        }
+  <style>
+  .contenedor {
+    margin: 5% 25%;
+  }
 
-        .nomTorneo{
-            background-color: #303841;
-            color: white;
-            width: 79%;
-            margin-left: 44px;
-            text-align: center;
-            font-size: 30px;
-        }
+  .topCard {
+    background-color: #303841;
+    color: white;
+    font-size: 29px;
+    font-weight: 600;
+    height: 50%;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+  }
 
-        .historial{
-            display: flex;
-            justify-content: center;
-        }
+  .size {
+    min-height: 70px;
+    padding-bottom: 10px;
+  }
 
-        .jug1{
-            text-align: center;
-            width: 30%;
-            background-color: #c9c9c9;
-        }
+  .card-text {
+    font-size: 25px;
+  }
 
-        .jug2{
-            text-align: center;
-            width: 30%;
-            background-color: #c9c9c9;
-            
-        }
+  .card {
+    border-radius: 9px;
+    padding: 5px;
+    font-size: 20px;
+    margin: 30px 0;
+  }
 
-        .marcador{
-            font-size: 30px;
-        }
+  .nomTorneo {
+    background-color: #303841;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+  }
 
-        .nombre{
-            font-size: 20px;
-        }
+  .ganador {
+    font-weight: 700;
+    font-size: 27px;
+  }
 
-        .vs{
-            width: 80px;
-            text-align: center;
-            padding-top: 20px;
-            text-align: center;
-
-        }
-
-    </style>
+  .perdedor {
+    color: #747474;
+    font-size: 27px;
+  }
+  </style>
 </head>
-    <body>
-        <div class="contenedor">
-            <div class="nomTorneo">
-                <span>El torneo</span>
-            </div>
-            <div class=" historial">
-                <div class="jug1">
-                    <span class="nombre">Josue Perez</span>
-                    <br/>
-                    <span class="marcador">6</span>
-                </div>
-                <div class="vs">
-                    <span>VS</span>
-                </div>
-                <div class="jug2">
-                    <span class="nombre">Manuel Lopez</span>
-                    <br/>
-                    <span class="marcador">2</span>
-                </div>
-            </div>
-        </div>
 
-        <div class="contenedor">
-            <div class="nomTorneo">
-                <span>El torneo del barrio </span>
-            </div>
-            <div class=" historial">
-                <div class="jug1">
-                    <span class="nombre" >Josue Perez</span>
-                    <br/>
-                    <span class="marcador">6</span>
-                </div>
-                <div class="vs">
-                    <span>VS</span>
-                </div>
-                <div class="jug2">
-                    <span class="nombre">Joaquin Antonio</span>
-                    <br/>
-                    <span class="marcador">4</span>
-                </div>
-            </div>
+<body>
+  <div class="contenedor">
+    <h1 class="text-center">Historial de Partidos</h1>
+    <div class="card shadow">
+      <h5 class="card-title topCard">Alabama Open</h5>
+      <div class="container-fluid cuerpo">
+        <div class="row align-items-center text-center size">
+          <div class="col jugador" id="p1">
+            Josue Perez
+          </div>
+          <div class="col-2 ganador " id="ResP1">
+            6
+          </div>
+          <div class="col-2" id="vs">
+            vs
+          </div>
+          <div class="col-2 perdedor " id="ResP2">
+            2
+          </div>
+          <div class="col jugador" id="p2">
+            Manuel Lopez
+          </div>
         </div>
+        <div class="row align-items-center text-center size">
+          <div class="col jugador" id="p1">
+            Josue Perez
+          </div>
+          <div class="col-2 ganador " id="ResP1">
+            6
+          </div>
+          <div class="col-2" id="vs">
+            vs
+          </div>
+          <div class="col-2 perdedor " id="ResP2">
+            4
+          </div>
+          <div class="col jugador" id="p2">
+            Joaquin Antonio
+          </div>
+        </div>
+        <div class="row align-items-center text-center size">
+          <div class="col jugador" id="p1">
+            Josue Perez
+          </div>
+          <div class="col-2 ganador " id="ResP1">
+            6
+          </div>
+          <div class="col-2" id="vs">
+            vs
+          </div>
+          <div class="col-2 perdedor " id="ResP2">
+            1
+          </div>
+          <div class="col jugador" id="p2">
+            Brayan Luna
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card shadow">
+      <h5 class="card-title topCard">Masters Cup</h5>
+      <div class="container-fluid cuerpo">
+        <div class="row align-items-center text-center size">
+          <div class="col jugador" id="p1">
+            Josue Perez
+          </div>
+          <div class="col-2 ganador " id="ResP1">
+            6
+          </div>
+          <div class="col-2" id="vs">
+            vs
+          </div>
+          <div class="col-2 perdedor " id="ResP2">
+            2
+          </div>
+          <div class="col jugador" id="p2">
+            Manuel Lopez
+          </div>
+        </div>
+        <div class="row align-items-center text-center size">
+          <div class="col jugador" id="p1">
+            Josue Perez
+          </div>
+          <div class="col-2 ganador " id="ResP1">
+            6
+          </div>
+          <div class="col-2" id="vs">
+            vs
+          </div>
+          <div class="col-2 perdedor " id="ResP2">
+            1
+          </div>
+          <div class="col jugador" id="p2">
+            Joaquin Antonio
+          </div>
+        </div>
+        <div class="row align-items-center text-center size">
+          <div class="col jugador" id="p1">
+            Josue Perez
+          </div>
+          <div class="col-2 perdedor " id="ResP1">
+            2
+          </div>
+          <div class="col-2" id="vs">
+            vs
+          </div>
+          <div class="col-2 ganador " id="ResP2">
+            6
+          </div>
+          <div class="col jugador" id="p2">
+            Brayan Luna
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
 
-        <div class="contenedor">
-            <div class="nomTorneo">
-                <span>Torneo FCC </span>
-            </div>
-            <div class=" historial">
-                <div class="jug1">
-                    <span class="nombre" >Josue Perez</span>
-                    <br/>
-                    <span class="marcador">6</span>
-                </div>
-                <div class="vs">
-                    <span>VS</span>
-                </div>
-                <div class="jug2">
-                    <span class="nombre">Brayan Luna</span>
-                    <br/>
-                    <span class="marcador">1</span>
-                </div>
-            </div>
-        </div>
-    </body>
 </html>
