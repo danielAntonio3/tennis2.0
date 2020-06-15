@@ -20,7 +20,7 @@ $(document).ready(function () {
             var encuentro_id= js[x].encuentro_id;
             var jugador_id=js[x].jugador_id;
             var nombre=js[x].nombre;
-            var apellidos=js[x+1].apellidos;
+            var apellidos=js[x].apellidos;
             var nombreoponente=js[x+1].nombre;
             var apellidosop=js[x+1].apellidos;
 

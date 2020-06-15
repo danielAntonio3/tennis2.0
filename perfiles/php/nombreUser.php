@@ -8,8 +8,8 @@ $usuario = 'root';
 #contraseña de mysql de joshua
 #$pass = "xamppadampa";
 #contraseña de mysql de daniel
-$pass = "1234";
-   
+$pass = "";
+
   $mbd = new PDO('mysql:host=localhost;dbname=lobotennis', $usuario, $pass);
   $mbd->exec("SET NAMES 'utf8';");
 
@@ -20,10 +20,10 @@ $pass = "1234";
       $stmt->execute();
 
       $res=array();
-      while ($row=$stmt->fetch(PDO::FETCH_OBJ)){  
+      while ($row=$stmt->fetch(PDO::FETCH_OBJ)){
          $res[]=array(
             "nombre"=> $row->nombre,
-	        "apellidos"=> $row->apellidos, 
+	        "apellidos"=> $row->apellidos,
          );
      }
      echo json_encode($res);

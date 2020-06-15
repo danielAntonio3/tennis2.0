@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <script src="../0.-jquery/jquery-3.4.1.min.js"></script>
   <script src="../asignarPartidos/scripts/asignarPartidos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../asignarPartidos/css/estilos.css">
   <title>Partidos</title>
 </head>
@@ -31,7 +33,7 @@
         <div class="col-sm">
           <select name="" id="jugador1">
             <option value="">Selecciona jugador</option>
-            
+
           </select>
         </div>
         <div class="col-sm">
@@ -50,8 +52,8 @@
       <input type="date" name="fecha" id="fechaPartido" value="">
       <select class="" name="" id="tpartido">
         <option value="">Tipo</option>
-        <option value="Simple">Simple</option>
-        <option value="Doble">Doble</option>
+        <option value="Simple">Desempate</option>
+        <option value="Doble">Ventajas</option>
       </select>
       <select class="" name="" id="cancha">
         <option value="">Cancha</option>
@@ -68,6 +70,26 @@
       </select>
       <input type="submit" name="botonpartido" id="regPartido" value="Agendar">
     </center>
+
+
+    <div class="modal fade" id="modalpartidos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Partido Agendado</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>El partido ha sido agendado correctamente</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="recargarPag()">Listo</button>
+      </div>
+    </div>
+  </div>
+</div>
   </div>
 </body>
 

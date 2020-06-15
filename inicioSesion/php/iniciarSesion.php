@@ -6,13 +6,13 @@ $correo=$_SESSION['correo']=$_GET['correo'];
 
 $usuario = 'root';
 #$pass = "xamppadampa";
-$pass ="1234";
+$pass ="";
 
   $mbd = new PDO('mysql:host=localhost;dbname=lobotennis', $usuario, $pass);
 
   $correo=$_GET['correo'];
   $contrasena=$_GET['contrasena'];
-   
+
       $queryBusqueda ="select correo,contrasena,tipo_user from Usuario where correo='".$correo."'";
       $stmt = $mbd->prepare($queryBusqueda);
       $stmt->execute();

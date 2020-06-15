@@ -6,7 +6,7 @@ $b=$_SESSION['b'];
 
 
 $usuario = 'root';
-$pass = "1234";
+$pass = "";
 
 $mysqli = new mysqli('localhost', $usuario, $pass, 'lobotennis');
 $mysqli->set_charset("utf8");

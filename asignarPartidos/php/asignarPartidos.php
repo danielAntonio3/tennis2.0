@@ -3,7 +3,7 @@
 $usuario="root";
 
 
-$pass="1234";
+$pass="";
 
 session_start();
 $b=$_SESSION['b'];

@@ -28,6 +28,10 @@ $(document).ready(function () {
 
             $('#j1').text(nombrejugador);
             $('#j2').text(jugadoroponente);
+            var apellidoJ1=js[0].apellidos.toLowerCase();
+            var apellidoJ2=js[1].apellidos.toLowerCase();
+            $('#ij1').attr('src',"../imagenes/"+apellidoJ1+".jpg");
+            $('#ij2').attr('src',"../imagenes/"+apellidoJ2+".jpg");
 
 
       }
